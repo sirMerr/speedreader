@@ -37,7 +37,7 @@ function loadDB(){
 //    $linesArr = getLines();
 
 //    foreach($linesArr as $line){
-//        $dao->insert($line);
+//        $dao->insertLine($line);
 //    }
     echo "DB load finished";
 }
