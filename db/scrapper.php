@@ -7,31 +7,26 @@ function getLines()
 {
     sleep(1);
     $url = "http://www.textfiles.com/etext/FICTION/2000010.txt";
-    $lines = file($url);
+    $lines = file_get_contents($url);
 
-    removeExtraNewLines($lines);
+    // This took forever to figure out because [\n] didn't work and [\r\n] kind of worked,
+    // finally [\r?\n] worked (? being 0 or 1 instances)!
+    // I replace with \n\n so that when I explode it, it keeps only one \n
+    $lines = preg_replace("/(\r?\n){2,}/", "\n\n", $lines);
+    $linesArr = array_map('trim', explode("\n", $lines));
 
-    $count = sizeof($lines);
+    $count = sizeof($linesArr);
 
-    echo "Getting Lines finished.\n";
-    echo "Total: ".$count."\n";
-    return $lines;
-}
+    echo "Count start: ".$count;
+    // So that heroku doesn't hate us
+    $linesArr = array_slice($linesArr, 0,8000);
 
-/**
- * @param $lines array of strings
- */
-function removeExtraNewLines(&$lines) {
-    $keys = array_keys($lines, PHP_EOL);
+    $count = sizeof($linesArr);
 
-    for ($i = 0; $i < sizeof($keys) - 1; $i++) {
-        $line1 = $keys[$i];
-        $line2 = $keys[$i + 1];
-        if ($line2 === $line1 + 1) {
-            unset($lines[$line2]);
-            array_values($lines);
-        }
-    }
+    echo "Count done: ".$count;
+
+    echo "\nGetting Lines finished.\n";
+    return $linesArr;
 }
 
 /**
@@ -39,9 +34,9 @@ function removeExtraNewLines(&$lines) {
  */
 function loadDB(){
     $dao = new DAO();
-    $lines = getLines();
+    $linesArr = getLines();
 
-    foreach($lines as $line){
+    foreach($linesArr as $line){
         $dao->insert($line);
     }
     echo "DB load finished";
