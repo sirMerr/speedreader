@@ -4,7 +4,7 @@ class DAO{
     private $pdo;
 
     function __construct(){
-        include ('../Credentials.php');
+        include (_DIR_.'/../Credentials.php');
         try {
             $this->pdo = new PDO("pgsql:dbname=$dbname;host=$host", $user, $password);
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
