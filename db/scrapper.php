@@ -34,10 +34,10 @@ function getLines()
  */
 function loadDB(){
     $dao = new DAO();
-    $linesArr = getLines();
+//    $linesArr = getLines();
 
-    foreach($linesArr as $line){
-        $dao->insert($line);
-    }
+//    foreach($linesArr as $line){
+//        $dao->insert($line);
+//    }
     echo "DB load finished";
 }

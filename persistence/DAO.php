@@ -9,17 +9,33 @@ class DAO{
             $this->pdo = new PDO("pgsql:dbname=$dbname;host=$host", $user, $password);
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, FALSE);
-            $this->createTable();
+            // Uncomment the next two lines if trying to recreate table
+            // $this->createTableLines();
+            $this->createTableAccounts();
+
         } catch (PDOException $e) {
             echo "Error could not connect to db\n";
             echo $e->getMessage();
         }
     }
 
-    function createTable() {
+    function createTableLines() {
         $exist = "DROP TABLE IF EXISTS Lines;";
         $this->pdo->exec($exist);
-        $create = "CREATE TABLE Lines (id serial PRIMARY KEY, text varchar(255));";
+        $create = "CREATE TABLE Lines (id serial PRIMARY KEY, text VARCHAR(255));";
+        $this->pdo->exec($create);
+    }
+
+    function createTableAccounts() {
+        $exist = "DROP TABLE IF EXISTS Accounts;";
+        $this->pdo->exec($exist);
+        $create = "CREATE TABLE Accounts (
+                    id serial PRIMARY KEY, 
+                    username VARCHAR(50) NOT NULL UNIQUE, 
+                    password VARCHAR(50) NOT NULL,
+                    line_id int,
+                    FOREIGN KEY (line_id) REFERENCES Lines(id)
+                   );";
         $this->pdo->exec($create);
     }
 
