@@ -30,14 +30,14 @@ function getLines()
 }
 
 /**
- *
+ * Loads the dao and inserts line from the book
  */
 function loadDB(){
     $dao = new DAO();
-//    $linesArr = getLines();
+    $linesArr = getLines();
 
-//    foreach($linesArr as $line){
-//        $dao->insertLine($line);
-//    }
+    foreach($linesArr as $line){
+        $dao->insertLine($line);
+    }
     echo "DB load finished";
 }

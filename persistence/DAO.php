@@ -13,7 +13,7 @@ class DAO{
      * and creates tables if specified
      */
     function __construct(){
-        include (_DIR_.'/../Credentials.php');
+        include (__DIR__.'/../Credentials.php');
         try {
             $this->pdo = new PDO("pgsql:dbname=$dbname;host=$host", $user, $password);
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -21,7 +21,6 @@ class DAO{
             // Uncomment the next two lines if trying to recreate table
             // $this->createTableLines();
             // $this->createTableAccounts();
-
         } catch (PDOException $e) {
             echo "Error could not connect to db\n";
             echo $e->getMessage();
@@ -48,7 +47,7 @@ class DAO{
                     id serial PRIMARY KEY, 
                     username VARCHAR(50) NOT NULL UNIQUE, 
                     password VARCHAR(50) NOT NULL,
-                    line_id int,
+                    line_id int DEFAULT 1,
                     login_attempts int DEFAULT 0,
                     FOREIGN KEY (line_id) REFERENCES Lines(id)
                    );";
@@ -89,6 +88,170 @@ class DAO{
         }catch(PDOException $e){
             echo $e->getMessage();
         }
+    }
+
+    /**
+     * Checks if an account with a given username and password exists
+     *
+     * @param $username
+     * @param $password
+     * @return bool true if found, false if not
+     */
+    function findAccount($username, $password) {
+        $query = "SELECT count(*)
+                    FROM accounts
+                    WHERE username = ? AND password = ?
+                 ";
+
+        $stmt = $this -> pdo -> prepare($query);
+        $stmt -> bindParam(1, $username);
+        $stmt -> bindParam(2, $password);
+
+        $stmt -> execute();
+
+        $userExists = $stmt -> fetch();
+
+        return boolval($userExists);
+
+    }
+
+    /**
+     * Finds the hash for a username
+     *
+     * @param $username
+     * @return the found hash
+     */
+    function findHash($username) {
+        $query = "SELECT password
+                    FROM accounts
+                    WHERE username = ?
+                 ";
+
+        $stmt = $this -> pdo -> prepare($query);
+        $stmt -> bindParam(1, $username);
+
+        $stmt -> execute();
+
+        $password = $stmt -> fetch();
+
+        return $password;
+
+    }
+
+    /**
+     * Checks if a username was already taken
+     *
+     * @param $username
+     * @return bool true if found, false if not
+     */
+    function findUsernameTaken($username) {
+        $query = "SELECT count(*)
+                    FROM accounts
+                    WHERE username = ?
+                 ";
+
+        $stmt = $this -> pdo -> prepare($query);
+        $stmt -> bindParam(1, $username);
+
+        $stmt -> execute();
+
+        $usernameExists = $stmt -> fetch();
+
+        return boolval($usernameExists);
+
+    }
+
+    /**
+     * Find line text of the book that a user is at
+     * @param $username
+     * @return int line id
+     * @internal param $password
+     */
+    function findLineIdForAccount($username) {
+        $query = "SELECT line_id FROM accounts 
+                  WHERE username=?
+                 ";
+
+        $stmt = $this -> pdo -> prepare($query);
+        $stmt -> bindParam(1, $username);
+
+        $stmt -> execute();
+
+        $lineId = $stmt -> fetch();
+
+        return $lineId;
+    }
+
+    /**
+     * Find line text of the book that a user is at
+     * @param $username
+     * @return text of the line
+     * @internal param $password
+     */
+    function findLineForAccount($username) {
+        $query = "SELECT text FROM Lines 
+                  WHERE id=(SELECT line_id
+                    FROM Accounts
+                    WHERE username = ?)
+                 ";
+
+        $stmt = $this -> pdo -> prepare($query);
+        $stmt -> bindParam(1, $username);
+
+        $stmt -> execute();
+
+        $line = $stmt -> fetch();
+
+        return $line;
+    }
+
+    /**
+     * Find number of login attempts for a user
+     *
+     * @param $username
+     * @return mixed number of login attempts
+     */
+    function findLoginAttempts($username) {
+        $query = "SELECT login_attempts
+                    FROM accounts
+                    WHERE username = ?
+                 ";
+
+        $stmt = $this -> pdo -> prepare($query);
+        $stmt -> bindParam(1, $username);
+
+        $stmt -> execute();
+
+        $loginAttempts = $stmt -> fetch();
+
+        return $loginAttempts;
+    }
+    /**
+     * Increments login attempts
+     *
+     * @param $username
+     */
+    function updateLoginAttemptsIncrement($username) {
+        $query = "UPDATE accounts SET login_attempts=login_attempts+1 WHERE username=?";
+
+        $stmt = $this -> pdo -> prepare($query);
+        $stmt -> bindParam(1, $username);
+
+        $stmt->execute();
+    }
+
+    /**
+     * Resets the login attempts to 0
+     *
+     * @param $username
+     */
+    function updateResetLoginAttempts($username) {
+        $query = "UPDATE accounts SET login_attempts=0 WHERE username=?";
+
+        $stmt = $this -> pdo -> prepare($query);
+        $stmt -> bindParam(1, $username);
+
+        $stmt->execute();
     }
 
     function closeConnection() {
