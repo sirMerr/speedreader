@@ -15,6 +15,7 @@ $dao = new DAO();
 if ($dao ->findUsernameTaken($username)) {
     // Error
 } else {
+    "echo 'console.log(\"Creating Account\")'";
     $password = password_hash($_POST["password"],PASSWORD_DEFAULT);
     $dao->insertAccount($username, $password);
     // Save in session
@@ -23,4 +24,7 @@ if ($dao ->findUsernameTaken($username)) {
     $GLOBALS['profile']->setUsername($_SESSION['username']);
     $GLOBALS['profile']->setLineId($dao->findLineIdForAccount($_SESSION['username']));
     echo "New account created\n";
+
+    header('../views/reader.php');
+    exit();
 }
