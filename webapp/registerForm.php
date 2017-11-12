@@ -8,9 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit();
 }
 
-if (isset($_POST["username"])) {
-    echo $_POST["username"]."\n";
-}
+
 $username = $_POST["username"];
 $dao = new DAO();
 
@@ -24,4 +22,5 @@ if ($dao ->findUsernameTaken($username)) {
     session_regenerate_id();
     $GLOBALS['profile']->setUsername($_SESSION['username']);
     $GLOBALS['profile']->setLineId($dao->findLineIdForAccount($_SESSION['username']));
+    echo "New account created\n";
 }

@@ -19,7 +19,7 @@ class DAO{
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, FALSE);
             // Uncomment the next two lines if trying to recreate table
-            // $this->createTableLines();
+             $this->createTableLines();
             // $this->createTableAccounts();
         } catch (PDOException $e) {
             echo "Error could not connect to db\n";
@@ -31,7 +31,7 @@ class DAO{
      * Create table for lines
      */
     function createTableLines() {
-        $exist = "DROP TABLE IF EXISTS Lines;";
+        $exist = "DROP TABLE IF EXISTS Lines CASCADE ;";
         $this->pdo->exec($exist);
         $create = "CREATE TABLE Lines (id serial PRIMARY KEY, text VARCHAR(255));";
         $this->pdo->exec($create);
@@ -41,7 +41,7 @@ class DAO{
      * Create table for accounts
      */
     function createTableAccounts() {
-        $exist = "DROP TABLE IF EXISTS Accounts;";
+        $exist = "DROP TABLE IF EXISTS Accounts CASCADE ;";
         $this->pdo->exec($exist);
         $create = "CREATE TABLE Accounts (
                     id serial PRIMARY KEY, 
@@ -66,6 +66,8 @@ class DAO{
             $stmt->bindValue(1, $line);
 
             $stmt->execute();
+
+            echo ".";
         }catch(PDOException $e){
             echo $e->getMessage();
         }

@@ -39,5 +39,5 @@ function loadDB(){
     foreach($linesArr as $line){
         $dao->insertLine($line);
     }
-    echo "DB load finished";
+    echo "\n==DB load finished==\n";
 }

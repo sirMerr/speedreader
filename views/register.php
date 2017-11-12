@@ -5,7 +5,7 @@ echo "
 
 echo "
 <div class='container'>
-<h1>Sign In</h1>
+<h1>Register</h1>
 <form action='../webapp/registerForm.php' method='POST' id='registerForm'>
   <div class='form-group'>
     <label for='username'>Username</label>
