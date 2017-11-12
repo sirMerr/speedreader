@@ -30,31 +30,32 @@
       <file leaf-file-name="DAO.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/persistence/DAO.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="174" column="10" lean-forward="true" selection-start-line="174" selection-start-column="10" selection-end-line="174" selection-end-column="10" />
+            <state relative-caret-position="285">
+              <caret line="175" column="9" lean-forward="true" selection-start-line="175" selection-start-column="9" selection-end-line="175" selection-end-column="9" />
               <folding>
-                <marker date="1510515937000" expanded="true" signature="925:951" ph="DROP TABLE I... " />
-                <marker date="1510515937000" expanded="true" signature="925:959" ph="DROP TABLE I... " />
-                <marker date="1510515937000" expanded="true" signature="1017:1078" ph="CREATE TABLE... Lines" />
-                <marker date="1510515937000" expanded="true" signature="1228:1257" ph="DROP TABLE I... " />
-                <marker date="1510515937000" expanded="true" signature="1228:1265" ph="DROP TABLE I... " />
-                <marker date="1510515937000" expanded="true" signature="1323:1677" ph="CREATE TABLE... Accounts" />
-                <marker date="1510515937000" expanded="true" signature="1857:1892" ph="INSERT INTO Lines... " />
-                <marker date="1510515937000" expanded="true" signature="2312:2367" ph="INSERT INTO Accounts... " />
-                <marker date="1510515937000" expanded="true" signature="2894:2999" ph="SELECT count... accounts" />
-                <marker date="1510515937000" expanded="true" signature="3437:3525" ph="SELECT count... accounts" />
-                <marker date="1510515937000" expanded="true" signature="3944:4031" ph="SELECT count... accounts" />
-                <marker date="1510515937000" expanded="true" signature="3944:4032" ph="SELECT count... accounts" />
-                <marker date="1510515937000" expanded="true" signature="4337:4351" ph="..." />
-                <marker date="1510515937000" expanded="true" signature="4337:4388" ph="..." />
-                <marker date="1510515937000" expanded="true" signature="4467:4513" ph="..." />
-                <marker date="1510515937000" expanded="true" signature="4581:4621" ph="..." />
-                <marker date="1510515937000" expanded="true" signature="4901:4965" ph="SELECT line_... accounts" />
-                <marker date="1510515937000" expanded="true" signature="5396:5536" ph="SELECT text Lines" />
-                <marker date="1510515937000" expanded="true" signature="5448:5535" ph="SELECT line_... accounts" />
-                <marker date="1510515937000" expanded="true" signature="5946:6040" ph="SELECT login... accounts" />
-                <marker date="1510515937000" expanded="true" signature="6417:6485" ph="UPDATE accou... " />
-                <marker date="1510515937000" expanded="true" signature="6768:6821" ph="UPDATE accou... " />
+                <marker date="1510516044000" expanded="true" signature="925:951" ph="DROP TABLE I... " />
+                <marker date="1510516044000" expanded="true" signature="925:959" ph="DROP TABLE I... " />
+                <marker date="1510516044000" expanded="true" signature="1017:1078" ph="CREATE TABLE... Lines" />
+                <marker date="1510516044000" expanded="true" signature="1228:1257" ph="DROP TABLE I... " />
+                <marker date="1510516044000" expanded="true" signature="1228:1265" ph="DROP TABLE I... " />
+                <marker date="1510516044000" expanded="true" signature="1323:1677" ph="CREATE TABLE... Accounts" />
+                <marker date="1510516044000" expanded="true" signature="1857:1892" ph="INSERT INTO Lines... " />
+                <marker date="1510516044000" expanded="true" signature="2312:2367" ph="INSERT INTO Accounts... " />
+                <marker date="1510516044000" expanded="true" signature="2894:2999" ph="SELECT count... accounts" />
+                <marker date="1510516044000" expanded="true" signature="3437:3525" ph="SELECT count... accounts" />
+                <marker date="1510516044000" expanded="true" signature="3944:4031" ph="SELECT count... accounts" />
+                <marker date="1510516044000" expanded="true" signature="3944:4032" ph="SELECT count... accounts" />
+                <marker date="1510516044000" expanded="true" signature="4340:4354" ph="..." />
+                <marker date="1510516044000" expanded="true" signature="4340:4391" ph="..." />
+                <marker date="1510516044000" expanded="true" signature="4470:4516" ph="..." />
+                <marker date="1510516044000" expanded="true" signature="4584:4598" ph="..." />
+                <marker date="1510516044000" expanded="true" signature="4584:4624" ph="..." />
+                <marker date="1510516044000" expanded="true" signature="4907:4971" ph="SELECT line_... accounts" />
+                <marker date="1510516044000" expanded="true" signature="5402:5542" ph="SELECT text Lines" />
+                <marker date="1510516044000" expanded="true" signature="5454:5541" ph="SELECT line_... accounts" />
+                <marker date="1510516044000" expanded="true" signature="5952:6046" ph="SELECT login... accounts" />
+                <marker date="1510516044000" expanded="true" signature="6423:6491" ph="UPDATE accou... " />
+                <marker date="1510516044000" expanded="true" signature="6774:6827" ph="UPDATE accou... " />
               </folding>
             </state>
           </provider>
@@ -354,7 +355,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27520000" />
+    <option name="totallyTimeSpent" value="27611000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="377" y="23" width="1048" height="809" extended-state="0" />
@@ -480,28 +481,29 @@
         <state relative-caret-position="1023">
           <caret line="69" column="19" lean-forward="false" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
           <folding>
-            <marker date="1510515937000" expanded="true" signature="925:951" ph="DROP TABLE I... " />
-            <marker date="1510515937000" expanded="true" signature="925:959" ph="DROP TABLE I... " />
-            <marker date="1510515937000" expanded="true" signature="1017:1078" ph="CREATE TABLE... Lines" />
-            <marker date="1510515937000" expanded="true" signature="1228:1257" ph="DROP TABLE I... " />
-            <marker date="1510515937000" expanded="true" signature="1228:1265" ph="DROP TABLE I... " />
-            <marker date="1510515937000" expanded="true" signature="1323:1677" ph="CREATE TABLE... Accounts" />
-            <marker date="1510515937000" expanded="true" signature="1857:1892" ph="INSERT INTO Lines... " />
-            <marker date="1510515937000" expanded="true" signature="2312:2367" ph="INSERT INTO Accounts... " />
-            <marker date="1510515937000" expanded="true" signature="2894:2999" ph="SELECT count... accounts" />
-            <marker date="1510515937000" expanded="true" signature="3437:3525" ph="SELECT count... accounts" />
-            <marker date="1510515937000" expanded="true" signature="3944:4031" ph="SELECT count... accounts" />
-            <marker date="1510515937000" expanded="true" signature="3944:4032" ph="SELECT count... accounts" />
-            <marker date="1510515937000" expanded="true" signature="4337:4351" ph="..." />
-            <marker date="1510515937000" expanded="true" signature="4337:4388" ph="..." />
-            <marker date="1510515937000" expanded="true" signature="4467:4513" ph="..." />
-            <marker date="1510515937000" expanded="true" signature="4581:4621" ph="..." />
-            <marker date="1510515937000" expanded="true" signature="4901:4965" ph="SELECT line_... accounts" />
-            <marker date="1510515937000" expanded="true" signature="5396:5536" ph="SELECT text Lines" />
-            <marker date="1510515937000" expanded="true" signature="5448:5535" ph="SELECT line_... accounts" />
-            <marker date="1510515937000" expanded="true" signature="5946:6040" ph="SELECT login... accounts" />
-            <marker date="1510515937000" expanded="true" signature="6417:6485" ph="UPDATE accou... " />
-            <marker date="1510515937000" expanded="true" signature="6768:6821" ph="UPDATE accou... " />
+            <marker date="1510516044000" expanded="true" signature="925:951" ph="DROP TABLE I... " />
+            <marker date="1510516044000" expanded="true" signature="925:959" ph="DROP TABLE I... " />
+            <marker date="1510516044000" expanded="true" signature="1017:1078" ph="CREATE TABLE... Lines" />
+            <marker date="1510516044000" expanded="true" signature="1228:1257" ph="DROP TABLE I... " />
+            <marker date="1510516044000" expanded="true" signature="1228:1265" ph="DROP TABLE I... " />
+            <marker date="1510516044000" expanded="true" signature="1323:1677" ph="CREATE TABLE... Accounts" />
+            <marker date="1510516044000" expanded="true" signature="1857:1892" ph="INSERT INTO Lines... " />
+            <marker date="1510516044000" expanded="true" signature="2312:2367" ph="INSERT INTO Accounts... " />
+            <marker date="1510516044000" expanded="true" signature="2894:2999" ph="SELECT count... accounts" />
+            <marker date="1510516044000" expanded="true" signature="3437:3525" ph="SELECT count... accounts" />
+            <marker date="1510516044000" expanded="true" signature="3944:4031" ph="SELECT count... accounts" />
+            <marker date="1510516044000" expanded="true" signature="3944:4032" ph="SELECT count... accounts" />
+            <marker date="1510516044000" expanded="true" signature="4340:4354" ph="..." />
+            <marker date="1510516044000" expanded="true" signature="4340:4391" ph="..." />
+            <marker date="1510516044000" expanded="true" signature="4470:4516" ph="..." />
+            <marker date="1510516044000" expanded="true" signature="4584:4598" ph="..." />
+            <marker date="1510516044000" expanded="true" signature="4584:4624" ph="..." />
+            <marker date="1510516044000" expanded="true" signature="4907:4971" ph="SELECT line_... accounts" />
+            <marker date="1510516044000" expanded="true" signature="5402:5542" ph="SELECT text Lines" />
+            <marker date="1510516044000" expanded="true" signature="5454:5541" ph="SELECT line_... accounts" />
+            <marker date="1510516044000" expanded="true" signature="5952:6046" ph="SELECT login... accounts" />
+            <marker date="1510516044000" expanded="true" signature="6423:6491" ph="UPDATE accou... " />
+            <marker date="1510516044000" expanded="true" signature="6774:6827" ph="UPDATE accou... " />
           </folding>
         </state>
       </provider>
@@ -730,31 +732,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/persistence/DAO.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="174" column="10" lean-forward="true" selection-start-line="174" selection-start-column="10" selection-end-line="174" selection-end-column="10" />
+        <state relative-caret-position="285">
+          <caret line="175" column="9" lean-forward="true" selection-start-line="175" selection-start-column="9" selection-end-line="175" selection-end-column="9" />
           <folding>
-            <marker date="1510515937000" expanded="true" signature="925:951" ph="DROP TABLE I... " />
-            <marker date="1510515937000" expanded="true" signature="925:959" ph="DROP TABLE I... " />
-            <marker date="1510515937000" expanded="true" signature="1017:1078" ph="CREATE TABLE... Lines" />
-            <marker date="1510515937000" expanded="true" signature="1228:1257" ph="DROP TABLE I... " />
-            <marker date="1510515937000" expanded="true" signature="1228:1265" ph="DROP TABLE I... " />
-            <marker date="1510515937000" expanded="true" signature="1323:1677" ph="CREATE TABLE... Accounts" />
-            <marker date="1510515937000" expanded="true" signature="1857:1892" ph="INSERT INTO Lines... " />
-            <marker date="1510515937000" expanded="true" signature="2312:2367" ph="INSERT INTO Accounts... " />
-            <marker date="1510515937000" expanded="true" signature="2894:2999" ph="SELECT count... accounts" />
-            <marker date="1510515937000" expanded="true" signature="3437:3525" ph="SELECT count... accounts" />
-            <marker date="1510515937000" expanded="true" signature="3944:4031" ph="SELECT count... accounts" />
-            <marker date="1510515937000" expanded="true" signature="3944:4032" ph="SELECT count... accounts" />
-            <marker date="1510515937000" expanded="true" signature="4337:4351" ph="..." />
-            <marker date="1510515937000" expanded="true" signature="4337:4388" ph="..." />
-            <marker date="1510515937000" expanded="true" signature="4467:4513" ph="..." />
-            <marker date="1510515937000" expanded="true" signature="4581:4621" ph="..." />
-            <marker date="1510515937000" expanded="true" signature="4901:4965" ph="SELECT line_... accounts" />
-            <marker date="1510515937000" expanded="true" signature="5396:5536" ph="SELECT text Lines" />
-            <marker date="1510515937000" expanded="true" signature="5448:5535" ph="SELECT line_... accounts" />
-            <marker date="1510515937000" expanded="true" signature="5946:6040" ph="SELECT login... accounts" />
-            <marker date="1510515937000" expanded="true" signature="6417:6485" ph="UPDATE accou... " />
-            <marker date="1510515937000" expanded="true" signature="6768:6821" ph="UPDATE accou... " />
+            <marker date="1510516044000" expanded="true" signature="925:951" ph="DROP TABLE I... " />
+            <marker date="1510516044000" expanded="true" signature="925:959" ph="DROP TABLE I... " />
+            <marker date="1510516044000" expanded="true" signature="1017:1078" ph="CREATE TABLE... Lines" />
+            <marker date="1510516044000" expanded="true" signature="1228:1257" ph="DROP TABLE I... " />
+            <marker date="1510516044000" expanded="true" signature="1228:1265" ph="DROP TABLE I... " />
+            <marker date="1510516044000" expanded="true" signature="1323:1677" ph="CREATE TABLE... Accounts" />
+            <marker date="1510516044000" expanded="true" signature="1857:1892" ph="INSERT INTO Lines... " />
+            <marker date="1510516044000" expanded="true" signature="2312:2367" ph="INSERT INTO Accounts... " />
+            <marker date="1510516044000" expanded="true" signature="2894:2999" ph="SELECT count... accounts" />
+            <marker date="1510516044000" expanded="true" signature="3437:3525" ph="SELECT count... accounts" />
+            <marker date="1510516044000" expanded="true" signature="3944:4031" ph="SELECT count... accounts" />
+            <marker date="1510516044000" expanded="true" signature="3944:4032" ph="SELECT count... accounts" />
+            <marker date="1510516044000" expanded="true" signature="4340:4354" ph="..." />
+            <marker date="1510516044000" expanded="true" signature="4340:4391" ph="..." />
+            <marker date="1510516044000" expanded="true" signature="4470:4516" ph="..." />
+            <marker date="1510516044000" expanded="true" signature="4584:4598" ph="..." />
+            <marker date="1510516044000" expanded="true" signature="4584:4624" ph="..." />
+            <marker date="1510516044000" expanded="true" signature="4907:4971" ph="SELECT line_... accounts" />
+            <marker date="1510516044000" expanded="true" signature="5402:5542" ph="SELECT text Lines" />
+            <marker date="1510516044000" expanded="true" signature="5454:5541" ph="SELECT line_... accounts" />
+            <marker date="1510516044000" expanded="true" signature="5952:6046" ph="SELECT login... accounts" />
+            <marker date="1510516044000" expanded="true" signature="6423:6491" ph="UPDATE accou... " />
+            <marker date="1510516044000" expanded="true" signature="6774:6827" ph="UPDATE accou... " />
           </folding>
         </state>
       </provider>

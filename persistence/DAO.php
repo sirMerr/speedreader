@@ -159,7 +159,7 @@ class DAO{
 
         $usernameExists = $stmt -> fetch();
 
-        $tester = boolval($usernameExists);
+        $tester = boolval($usernameExists[0]);
 
         if ($tester) {
             echo "
@@ -180,7 +180,7 @@ class DAO{
         </div>
         ";
 
-        return boolval($usernameExists);
+        return boolval($usernameExists[0]);
 
     }
 
