@@ -5,11 +5,23 @@ echo "
 ";
 
 echo "
-<div class='card'>
-  <div class='card-body'>
-    <h4 class='card-title'>Word</h4>
-    <p class='card-text'>With supporting text below as a natural lead-in to additional content.</p>
-    <a href='#' class='btn btn-primary'>Go somewhere</a>
-  </div>
+<div class='container'>
+    <div class='card'>
+      <div class='card-body'>
+        <h4 class='card-title'>Word</h4>
+        <p class='card-text'>With supporting text below as a natural lead-in to additional content.</p>
+        <select id=\"inputState\" class=\"form-control\">
+            <option>50 wpm</option>
+            <option selected>100 wpm</option>
+";
+
+for ($i = 150; $i < 2000; $i+=50) {
+    echo "<option>$i wpm</option>";
+}
+
+echo "
+         </select>
+      </div>
+    </div>
 </div>
 ";

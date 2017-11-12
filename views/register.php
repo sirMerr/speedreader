@@ -16,7 +16,8 @@ echo "
     <input type='password' class='form-control' id='password' name='password' required>
   </div>
   <button type='submit' class='btn btn-primary'>Register</button>
-  <a class='btn btn-primary' href='login.php' role='button'>Login Instead</a>
+  <div class='dropdown-divider'></div>
+  <a class='dropdown-item' href='login.php'>Already have an account? Login instead</a>
 </form>
 </div>
 ";

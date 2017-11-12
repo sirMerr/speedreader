@@ -4,19 +4,20 @@ echo "
 ";
 
 echo "
-<div class='dropdown-menu'>
-  <form class='px-4 py-3'>
-    <div class='form-group'>
-      <label for='username'>Username</label>
-      <input type='email' class='form-control' id='username' name='username'>
-    </div>
-    <div class='form-group'>
-      <label for='password'>Password</label>
-      <input type='password' class='form-control' id='password' name='password'>
-    </div>
-    <button type='submit' class='btn btn-primary'>Sign in</button>
-  </form>
+<div class='container'>
+<h1>Sign In</h1>
+<form action='../webapp/loginForm.php' method='POST' id='loginForm'>
+  <div class='form-group'>
+    <label for='username'>Username</label>
+    <input type='text' class='form-control' id='username' name='username' required>
+  </div>
+  <div class='form-group'>
+    <label for='password'>Password</label>
+    <input type='password' class='form-control' id='password' name='password' required>
+  </div>
+  <button type='submit' class='btn btn-primary'>Login</button>
   <div class='dropdown-divider'></div>
-  <a class='dropdown-item' href='register.php'>New around here? Sign up</a>
+  <a class='dropdown-item' href='register.php'>New around here? Register instead</a>
+</form>
 </div>
 ";
