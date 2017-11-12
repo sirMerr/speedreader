@@ -160,6 +160,20 @@ class DAO{
         $usernameExists = $stmt -> fetch();
 
         $tester = boolval($usernameExists);
+
+        if ($tester) {
+            echo "
+        <div class='container'>
+        <h1>This is true</h1>
+        </div>
+        ";
+        } else {
+            echo "
+        <div class='container'>
+        <h1>This is false</h1>
+        </div>
+        ";
+        }
         echo "
         <div class='container'>
         <h1>$tester</h1>
