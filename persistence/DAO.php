@@ -19,8 +19,8 @@ class DAO{
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, FALSE);
             // Uncomment the next two lines if trying to recreate table
-             $this->createTableLines();
-            // $this->createTableAccounts();
+//             $this->createTableLines();
+//             $this->createTableAccounts();
         } catch (PDOException $e) {
             echo "Error could not connect to db\n";
             echo $e->getMessage();
@@ -46,7 +46,7 @@ class DAO{
         $create = "CREATE TABLE Accounts (
                     id serial PRIMARY KEY, 
                     username VARCHAR(50) NOT NULL UNIQUE, 
-                    password VARCHAR(50) NOT NULL,
+                    password VARCHAR(255) NOT NULL,
                     line_id int DEFAULT 1,
                     login_attempts int DEFAULT 0,
                     FOREIGN KEY (line_id) REFERENCES Lines(id)
@@ -158,27 +158,6 @@ class DAO{
         $stmt -> execute();
 
         $usernameExists = $stmt -> fetch();
-
-        $tester = boolval($usernameExists[0]);
-
-        if ($tester) {
-            echo "
-        <div class='container'>
-        <h1>$usernameExists[0]</h1>
-        </div>
-        ";
-        } else {
-            echo "
-        <div class='container'>
-        <h1>This is false</h1>
-        </div>
-        ";
-        }
-        echo "
-        <div class='container'>
-        <h1>$tester</h1>
-        </div>
-        ";
 
         return boolval($usernameExists[0]);
 
