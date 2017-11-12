@@ -164,7 +164,7 @@ class DAO{
         if ($tester) {
             echo "
         <div class='container'>
-        <h1>$usernameExists</h1>
+        <h1>$usernameExists[0]</h1>
         </div>
         ";
         } else {
