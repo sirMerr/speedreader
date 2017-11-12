@@ -232,7 +232,7 @@ class DAO{
 
         $loginAttempts = $stmt -> fetch();
 
-        return $loginAttempts;
+        return $loginAttempts[0];
     }
     /**
      * Increments login attempts
