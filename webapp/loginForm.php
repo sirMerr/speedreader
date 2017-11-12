@@ -112,6 +112,8 @@ function login($username, $password) {
             $_SESSION['lineId'] = $dao->findLineIdForAccount($_SESSION['username']);
             session_regenerate_id();
 
+            print_r($_SESSION);
+
             echo "
             <div class='container'>
             <h1>Logging in!</h1>
