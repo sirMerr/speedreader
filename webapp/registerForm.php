@@ -4,7 +4,7 @@ require_once(__DIR__ . '/../persistence/DAO.php');
 // Validate that access is only through a POST request,
 // redirect to index.php if not
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('../views/reader.php');
+    header('Location:/'.'#');
     exit();
 }
 echo "
@@ -27,6 +27,6 @@ if ($dao ->findUsernameTaken($username)) {
     $GLOBALS['profile']->setLineId($dao->findLineIdForAccount($_SESSION['username']));
     echo "New account created\n";
 
-    header('../views/reader.php');
+    header('Location:/'.'../views/reader.php');
     exit();
 }
