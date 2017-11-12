@@ -137,11 +137,6 @@ class DAO{
 
         $password = $stmt -> fetch();
 
-        echo "
-    <div class='container'>
-    <h1>$password</h1>
-    </div>
-    ";
         return $password[0];
 
     }
