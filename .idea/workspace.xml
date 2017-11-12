@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2965379-9707-4adc-a297-99f635214a99" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/reader.php" afterPath="$PROJECT_DIR$/views/reader.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/registerForm.php" afterPath="$PROJECT_DIR$/webapp/registerForm.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -127,8 +126,8 @@
       <file leaf-file-name="registerForm.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webapp/registerForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+            <state relative-caret-position="195">
+              <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -352,7 +351,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25546000" />
+    <option name="totallyTimeSpent" value="25931000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="377" y="23" width="1048" height="809" extended-state="0" />
@@ -739,8 +738,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webapp/registerForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+        <state relative-caret-position="195">
+          <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
           <folding />
         </state>
       </provider>

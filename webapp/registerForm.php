@@ -4,6 +4,7 @@ require_once(__DIR__ . '/../persistence/DAO.php');
 // Validate that access is only through a POST request,
 // redirect to index.php if not
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    "echo 'console.log(\"Creating Account\")'";
     header('#');
     exit();
 }
