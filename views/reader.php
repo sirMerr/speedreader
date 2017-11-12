@@ -19,6 +19,8 @@ for ($i = 150; $i < 2000; $i+=50) {
     echo "<option>$i wpm</option>";
 }
 
+$wat = $_SESSION['username'];
+echo "$wat"."<br>";
 echo "
          </select>
       </div>
