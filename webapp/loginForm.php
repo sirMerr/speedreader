@@ -40,6 +40,14 @@ function login($username, $password) {
             session_regenerate_id();
             $GLOBALS['profile']->setUsername($_SESSION['username']);
             $GLOBALS['profile']->setLineId($dao->findLineIdForAccount($_SESSION['username']));
+
+            echo "
+            <div class='container'>
+            <h1>Logging in!</h1>
+            </div>
+            ";
+            header('Location:/'.'../views/reader.php');
+            exit();
         }
     }
 }
