@@ -159,6 +159,13 @@ class DAO{
 
         $usernameExists = $stmt -> fetch();
 
+        $tester = boolval($usernameExists);
+        echo "
+        <div class='container'>
+        <h1>$tester</h1>
+        </div>
+        ";
+
         return boolval($usernameExists);
 
     }
