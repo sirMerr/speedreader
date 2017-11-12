@@ -30,8 +30,8 @@
       <file leaf-file-name="DAO.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/persistence/DAO.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="71" column="34" lean-forward="false" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
+            <state relative-caret-position="-2389">
+              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding>
                 <marker date="1510514675000" expanded="true" signature="925:951" ph="DROP TABLE I... " />
                 <marker date="1510514675000" expanded="true" signature="925:959" ph="DROP TABLE I... " />
@@ -126,10 +126,12 @@
       <file leaf-file-name="registerForm.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webapp/registerForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            <state relative-caret-position="196">
+              <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
               <folding>
-                <marker date="1510515215000" expanded="true" signature="264:287" ph="..." />
+                <marker date="1510515526000" expanded="true" signature="264:287" ph="..." />
+                <marker date="1510515526000" expanded="true" signature="424:460" ph="..." />
+                <marker date="1510515526000" expanded="true" signature="917:959" ph="..." />
               </folding>
             </state>
           </provider>
@@ -292,11 +294,6 @@
             <path>
               <item name="speedreader" type="b2602c69:ProjectViewProjectNode" />
               <item name="speedreader" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="speedreader" type="b2602c69:ProjectViewProjectNode" />
-              <item name="speedreader" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="webapp" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
@@ -353,7 +350,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26877000" />
+    <option name="totallyTimeSpent" value="27148000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="377" y="23" width="1048" height="809" extended-state="0" />
@@ -664,33 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/persistence/DAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="71" column="34" lean-forward="false" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
-          <folding>
-            <marker date="1510514675000" expanded="true" signature="925:951" ph="DROP TABLE I... " />
-            <marker date="1510514675000" expanded="true" signature="925:959" ph="DROP TABLE I... " />
-            <marker date="1510514675000" expanded="true" signature="1017:1078" ph="CREATE TABLE... Lines" />
-            <marker date="1510514675000" expanded="true" signature="1228:1257" ph="DROP TABLE I... " />
-            <marker date="1510514675000" expanded="true" signature="1228:1265" ph="DROP TABLE I... " />
-            <marker date="1510514675000" expanded="true" signature="1323:1677" ph="CREATE TABLE... Accounts" />
-            <marker date="1510514675000" expanded="true" signature="1857:1892" ph="INSERT INTO Lines... " />
-            <marker date="1510514675000" expanded="true" signature="2312:2367" ph="INSERT INTO Accounts... " />
-            <marker date="1510514675000" expanded="true" signature="2894:2999" ph="SELECT count... accounts" />
-            <marker date="1510514675000" expanded="true" signature="3437:3525" ph="SELECT count... accounts" />
-            <marker date="1510514675000" expanded="true" signature="3944:4031" ph="SELECT count... accounts" />
-            <marker date="1510514675000" expanded="true" signature="3944:4032" ph="SELECT count... accounts" />
-            <marker date="1510514675000" expanded="true" signature="4486:4550" ph="SELECT line_... accounts" />
-            <marker date="1510514675000" expanded="true" signature="4981:5121" ph="SELECT text Lines" />
-            <marker date="1510514675000" expanded="true" signature="5033:5120" ph="SELECT line_... accounts" />
-            <marker date="1510514675000" expanded="true" signature="5531:5625" ph="SELECT login... accounts" />
-            <marker date="1510514675000" expanded="true" signature="6002:6070" ph="UPDATE accou... " />
-            <marker date="1510514675000" expanded="true" signature="6353:6406" ph="UPDATE accou... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/scrapper.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
@@ -738,12 +708,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/persistence/DAO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2389">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <marker date="1510514675000" expanded="true" signature="925:951" ph="DROP TABLE I... " />
+            <marker date="1510514675000" expanded="true" signature="925:959" ph="DROP TABLE I... " />
+            <marker date="1510514675000" expanded="true" signature="1017:1078" ph="CREATE TABLE... Lines" />
+            <marker date="1510514675000" expanded="true" signature="1228:1257" ph="DROP TABLE I... " />
+            <marker date="1510514675000" expanded="true" signature="1228:1265" ph="DROP TABLE I... " />
+            <marker date="1510514675000" expanded="true" signature="1323:1677" ph="CREATE TABLE... Accounts" />
+            <marker date="1510514675000" expanded="true" signature="1857:1892" ph="INSERT INTO Lines... " />
+            <marker date="1510514675000" expanded="true" signature="2312:2367" ph="INSERT INTO Accounts... " />
+            <marker date="1510514675000" expanded="true" signature="2894:2999" ph="SELECT count... accounts" />
+            <marker date="1510514675000" expanded="true" signature="3437:3525" ph="SELECT count... accounts" />
+            <marker date="1510514675000" expanded="true" signature="3944:4031" ph="SELECT count... accounts" />
+            <marker date="1510514675000" expanded="true" signature="3944:4032" ph="SELECT count... accounts" />
+            <marker date="1510514675000" expanded="true" signature="4486:4550" ph="SELECT line_... accounts" />
+            <marker date="1510514675000" expanded="true" signature="4981:5121" ph="SELECT text Lines" />
+            <marker date="1510514675000" expanded="true" signature="5033:5120" ph="SELECT line_... accounts" />
+            <marker date="1510514675000" expanded="true" signature="5531:5625" ph="SELECT login... accounts" />
+            <marker date="1510514675000" expanded="true" signature="6002:6070" ph="UPDATE accou... " />
+            <marker date="1510514675000" expanded="true" signature="6353:6406" ph="UPDATE accou... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/registerForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        <state relative-caret-position="196">
+          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
           <folding>
-            <marker date="1510515215000" expanded="true" signature="264:287" ph="..." />
+            <marker date="1510515526000" expanded="true" signature="264:287" ph="..." />
+            <marker date="1510515526000" expanded="true" signature="424:460" ph="..." />
+            <marker date="1510515526000" expanded="true" signature="917:959" ph="..." />
           </folding>
         </state>
       </provider>

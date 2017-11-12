@@ -16,6 +16,12 @@ $username = $_POST["username"];
 $dao = new DAO();
 
 if ($dao ->findUsernameTaken($username)) {
+
+    echo "
+    <div class='container'>
+    <h1>User taken!</h1>
+    </div>
+    ";
     // Error
 } else {
     $password = password_hash($_POST["password"],PASSWORD_DEFAULT);
@@ -26,6 +32,12 @@ if ($dao ->findUsernameTaken($username)) {
     $GLOBALS['profile']->setUsername($_SESSION['username']);
     $GLOBALS['profile']->setLineId($dao->findLineIdForAccount($_SESSION['username']));
     echo "New account created\n";
+
+    echo "
+    <div class='container'>
+    <h1>Created new user!</h1>
+    </div>
+    ";
 
     header('Location:/'.'../views/reader.php');
     exit();
