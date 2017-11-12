@@ -137,7 +137,7 @@ class DAO{
 
         $password = $stmt -> fetch();
 
-        return $password;
+        return $password[0];
 
     }
 
