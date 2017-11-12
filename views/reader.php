@@ -10,7 +10,7 @@ echo "
       <div class='card-body'>
         <h4 class='card-title'>Word</h4>
         <p class='card-text'>With supporting text below as a natural lead-in to additional content.</p>
-        <select id=\"inputState\" class=\"form-control\">
+        <select id='inputState' class='form-control'>
             <option>50 wpm</option>
             <option selected>100 wpm</option>
 ";
@@ -23,5 +23,6 @@ echo "
          </select>
       </div>
     </div>
+    <a role='button' class='btn btn-link' href='../webapp/logout.php'>Logout</a>
 </div>
 ";
