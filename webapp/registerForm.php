@@ -7,8 +7,11 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('../views/reader.php');
     exit();
 }
-
-
+echo "
+<div class='container'>
+<h1>Hallo!</h1>
+</div>
+";
 $username = $_POST["username"];
 $dao = new DAO();
 
