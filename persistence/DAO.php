@@ -48,6 +48,7 @@ class DAO{
                     username VARCHAR(50) NOT NULL UNIQUE, 
                     password VARCHAR(255) NOT NULL,
                     line_id int DEFAULT 1,
+                    wpm int DEFAULT 100,
                     login_attempts int DEFAULT 0,
                     FOREIGN KEY (line_id) REFERENCES Lines(id)
                    );";
