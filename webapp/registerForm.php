@@ -28,10 +28,8 @@ if ($dao ->findUsernameTaken($username)) {
     $dao->insertAccount($username, $password);
     // Save in session
     $_SESSION['username'] = $username;
+    $_SESSION['lineId'] = $dao->findLineIdForAccount($_SESSION['username']);
     session_regenerate_id();
-    $GLOBALS['profile']->setUsername($_SESSION['username']);
-    $GLOBALS['profile']->setLineId($dao->findLineIdForAccount($_SESSION['username']));
-    echo "New account created\n";
 
     echo "
     <div class='container'>

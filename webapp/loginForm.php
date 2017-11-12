@@ -51,7 +51,6 @@ function ErrorHandler($type, $message, $file, $line)
 
 $old_error_handler = set_error_handler("ErrorHandler");
 require_once(__DIR__ . '/../persistence/DAO.php');
-require_once(__DIR__ . '/../entities/Account.php');
 
 // Validate that access is only through a POST request,
 // redirect to index.php if not
@@ -110,9 +109,8 @@ function login($username, $password) {
             // Reset attempts
             // Save in session
             $_SESSION['username'] = $username;
+            $_SESSION['lineId'] = $dao->findLineIdForAccount($_SESSION['username']);
             session_regenerate_id();
-            $GLOBALS['profile']->setUsername($_SESSION['username']);
-            $GLOBALS['profile']->setLineId($dao->findLineIdForAccount($_SESSION['username']));
 
             echo "
             <div class='container'>
