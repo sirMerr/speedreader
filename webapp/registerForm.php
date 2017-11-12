@@ -26,6 +26,10 @@ if ($dao ->findUsernameTaken($username)) {
 } else {
     $password = password_hash($_POST["password"],PASSWORD_DEFAULT);
     $dao->insertAccount($username, $password);
+
+    // Start session
+    session_start();
+
     // Save in session
     $_SESSION['username'] = $username;
     $_SESSION['lineId'] = $dao->findLineIdForAccount($_SESSION['username']);

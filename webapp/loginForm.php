@@ -106,7 +106,10 @@ function login($username, $password) {
             ";
         } else {
             $dao->updateResetLoginAttempts($username);
-            // Reset attempts
+
+            // Start session
+            session_start();
+
             // Save in session
             $_SESSION['username'] = $username;
             $_SESSION['lineId'] = $dao->findLineIdForAccount($_SESSION['username']);
