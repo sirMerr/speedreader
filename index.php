@@ -11,9 +11,9 @@ if (isset($_SESSION['username'])) {
     // Set profile
     $profile->setUsername($_SESSION['username']);
     $profile->setLineId($dao->findLineIdForAccount($_SESSION['username']));
-    header('Location:/'.'speedreader/views/reader.php');
+    header('Location:/'.'views/reader.php');
     exit();
 } else {
-    header('Location:/'.'speedreader/views/login.php');
+    header('Location:/'.'views/login.php');
     exit();
 }
