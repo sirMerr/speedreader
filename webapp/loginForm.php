@@ -100,9 +100,9 @@ function login($username, $password) {
             $dao->updateLoginAttemptsIncrement($username);
             // Redirect to error page, or back to login with error message
             echo "
-            <div class='container'>
-            <h1>Invalid login, incrementing login attempts.</h1>
-            </div>
+            <script>
+            console.log('Invalid login'); 
+</script>
             ";
         } else {
             $dao->updateResetLoginAttempts($username);
@@ -114,7 +114,7 @@ function login($username, $password) {
 
             echo "
             <script>
-            console.log($_SESSION); 
+            console.log(\"$_SESSION\"); 
 </script>
             ";
             echo "
