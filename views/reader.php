@@ -76,7 +76,7 @@ echo "LineId: ".$lineId;
         xhttp.onreadystatechange = function() {
             if (this.readyState === 4 && this.status === 200) {
                 console.log(this.responseText);
-                g.wpmSelector.value = this.responseText;
+                g.wpmSelector.value = this.responseText + " wpm";
             }
         };
         xhttp.open("GET", "../ajax/speed.php", true);

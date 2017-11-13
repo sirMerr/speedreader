@@ -113,6 +113,11 @@ function login($username, $password) {
             session_regenerate_id();
 
             echo "
+            <script>
+            console.log($_SESSION); 
+</script>
+            ";
+            echo "
             <div class='container'>
             <h1>Logging in!</h1>
             </div>
