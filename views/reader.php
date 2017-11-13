@@ -25,10 +25,10 @@ echo "
          </select>
       </div>
             <div class='col-sm'>
-              <button type='button' class='btn btn-success'>Start</button>
+              <button type='button' class='btn btn-success btn-start'>Start</button>
             </div>
             <div class='col-sm'>
-              <button type='button' class='btn btn-danger'>Stop</button>
+              <button type='button' class='btn btn-danger btn-start'>Stop</button>
             </div>
           </div>
         </div>
@@ -51,10 +51,39 @@ echo "LineId: ".$lineId;
     function init () {
         g.word = document.querySelector(".word");
         g.wpmSelector = document.querySelector(".wpmSelector");
+        g.line = '';
+        g.btnStart = document.querySelector(".btn-start");
+        g.btnStop = document.querySelector(".btn-stop");
 
         g.wpmSelector.addEventListener('onchange', setSpeed);
+        g.btnStart.addEventListener('click', startLines);
+        g.btnStop.addEventListener('click', stopLines);
         getLine();
         getSpeed();
+    }
+
+    function startLines() {
+        if (g.line && g.line !== '') {
+            const lineArr = g.line.split(" ");
+            let counter = 0;
+
+            g.interval = setInterval(printLine, Math.round(g.wpmSelector.value / 60 * 1000));
+
+            function printLine() {
+                if (counter >= lineArr.length) {
+                    clearInterval(interval);
+                } else {
+                    g.word.innerHTML = lineArr[counter];
+                    counter++;
+                }
+            }
+        }
+    }
+
+    function stopLines() {
+        if (g.interval) {
+            clearInterval(g.interval);
+        }
     }
 
     function getLine() {
@@ -63,7 +92,8 @@ echo "LineId: ".$lineId;
         xhttp.onreadystatechange = function() {
             if (this.readyState === 4 && this.status === 200) {
                 console.log(this.responseText);
-                g.word.innerHTML = this.responseText;
+                g.line = this.responseText;
+                g.word.innerHTML = g.line;
             }
         };
         xhttp.open("GET", "../ajax/line.php", true);
