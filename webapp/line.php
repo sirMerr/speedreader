@@ -6,4 +6,8 @@ $dao = new DAO();
 $line = $dao->findLineForAccount('admin');
 $dao->updateLineIdIncrement();
 
-return $line;
+echo "
+<script>
+    document.querySelector(\".word\").innerHTML = $line;
+</script>
+";
