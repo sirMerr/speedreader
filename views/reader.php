@@ -71,7 +71,7 @@ echo "LineId: ".$lineId;
 
             // @todo: Handle end of book
             function printLine() {
-                if (counter >= lineArr.length) {
+                if (lineArr.length === 0 || counter >= lineArr.length) {
                     getLine();
                     counter = 0;
                     if (g.line.length !== 0) {
