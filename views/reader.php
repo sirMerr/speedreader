@@ -22,10 +22,11 @@ echo "
 ";
 
 echo "
+<div class='jumbotron vertical-center'>
 <div class='container'>
     <div class='card'>
       <div class='card-body'>
-        <p class='card-text word'></p>
+        <div class='card-text word'></div>
         <div class='container'>
           <div class='row'>
             <div class='col-sm'>
@@ -51,6 +52,7 @@ echo "
         </div>
     </div>
     <a role='button' class='btn btn-link' href='../webapp/logout.php'>Logout</a>
+</div>
 </div>
 ";
 
