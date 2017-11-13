@@ -18,6 +18,12 @@ echo "
         padding-bottom: 9px;
         min-height: 40px;
     }
+    
+    .vertical-center {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
 </style>
 ";
 
@@ -28,8 +34,8 @@ echo "
       <div class='card-body'>
         <div class='card-text word'></div>
         <div class='container'>
-          <div class='row'>
-            <div class='col-sm'>
+          <div class='row' style='justify-content: center'>
+            <div class='col-md-auto'>
               <select id='inputState' class='form-control wpmSelector'>
                 <option>50 wpm</option>
                 <option selected>100 wpm</option>
@@ -40,28 +46,22 @@ for ($i = 150; $i < 2000; $i+=50) {
 }
 
 echo "
-         </select>
-      </div>
-            <div class='col-sm'>
-              <button type='button' class='btn btn-success btn-start'>Start</button>
-            </div>
-            <div class='col-sm'>
-              <button type='button' class='btn btn-danger btn-stop'>Stop</button>
-            </div>
+            </select>
           </div>
+                <div class='col-md-auto'>
+                  <button type='button' class='btn btn-success btn-start'>Start</button>
+                </div>
+                <div class='col-md-auto'>
+                  <button type='button' class='btn btn-danger btn-stop'>Stop</button>
+                </div>
+              </div>
+            </div>
         </div>
     </div>
     <a role='button' class='btn btn-link' href='../webapp/logout.php'>Logout</a>
-</div>
+    <a role='button' class='btn btn-link' href='http://www.textfiles.com/etext/FICTION/2000010.txt'>Full Text</a>
 </div>
 ";
-
-print_r($_SESSION);
-$username = $_SESSION['username'];
-$lineId = $_SESSION['lineId'];
-
-echo "Username: ".$username;
-echo "LineId: ".$lineId;
 ?>
 <script>
     const g = {};
