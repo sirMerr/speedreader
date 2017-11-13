@@ -60,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reader.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="reader.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/reader.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-20">
-              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state relative-caret-position="174">
+              <caret line="65" column="37" lean-forward="true" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
               <folding>
                 <marker date="1510547759000" expanded="true" signature="280:632" ph="..." />
                 <marker date="1510547759000" expanded="true" signature="303:632" ph="..." />
@@ -83,20 +83,20 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="210">
+              <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
               <folding>
-                <marker date="1510548156000" expanded="true" signature="80:89" ph="..." />
+                <marker date="1510548301000" expanded="true" signature="80:89" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scrapper.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="scrapper.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/scrapper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+            <state relative-caret-position="210">
+              <caret line="14" column="59" lean-forward="true" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -396,7 +396,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47456000" />
+    <option name="totallyTimeSpent" value="47640000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="377" y="23" width="1048" height="809" extended-state="0" />
@@ -636,7 +636,7 @@
         <state relative-caret-position="120">
           <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <marker date="1510548156000" expanded="true" signature="80:89" ph="..." />
+            <marker date="1510548301000" expanded="true" signature="80:89" ph="..." />
           </folding>
         </state>
       </provider>
@@ -781,24 +781,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/reader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <marker date="1510547759000" expanded="true" signature="280:632" ph="..." />
-            <marker date="1510547759000" expanded="true" signature="303:632" ph="..." />
-            <marker date="1510547759000" expanded="true" signature="333:632" ph="..." />
-            <marker date="1510547759000" expanded="true" signature="408:632" ph="..." />
-            <marker date="1510547759000" expanded="true" signature="436:632" ph="..." />
-            <marker date="1510547759000" expanded="true" signature="469:632" ph="..." />
-            <marker date="1510547759000" expanded="true" signature="541:632" ph="..." />
-            <marker date="1510547759000" expanded="true" signature="782:876" ph="..." />
-            <marker date="1510547759000" expanded="true" signature="909:1001" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/loginForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
@@ -840,21 +822,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/db/scrapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="59" lean-forward="true" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="210">
+          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
           <folding>
-            <marker date="1510548156000" expanded="true" signature="80:89" ph="..." />
+            <marker date="1510548301000" expanded="true" signature="80:89" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/scrapper.php">
+    <entry file="file://$PROJECT_DIR$/views/reader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="174">
+          <caret line="65" column="37" lean-forward="true" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
+          <folding>
+            <marker date="1510547759000" expanded="true" signature="280:632" ph="..." />
+            <marker date="1510547759000" expanded="true" signature="303:632" ph="..." />
+            <marker date="1510547759000" expanded="true" signature="333:632" ph="..." />
+            <marker date="1510547759000" expanded="true" signature="408:632" ph="..." />
+            <marker date="1510547759000" expanded="true" signature="436:632" ph="..." />
+            <marker date="1510547759000" expanded="true" signature="469:632" ph="..." />
+            <marker date="1510547759000" expanded="true" signature="541:632" ph="..." />
+            <marker date="1510547759000" expanded="true" signature="782:876" ph="..." />
+            <marker date="1510547759000" expanded="true" signature="909:1001" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

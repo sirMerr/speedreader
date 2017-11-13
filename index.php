@@ -11,6 +11,10 @@ if (isset($_SESSION['username'])) {
     // Set profile
     $_SESSION['lineId'] = $dao->findLineIdForAccount($_SESSION['username']);
 
+    $username = $_SESSION['username'];
+    $lineId = $_SESSION['lineId'];
+    echo "Username: ".$username;
+    echo "Line Id: ".$lineId;
     header('Location:/'.'views/reader.php');
     exit();
 } else {
