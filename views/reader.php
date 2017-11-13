@@ -74,7 +74,6 @@ echo "LineId: ".$lineId;
                 if (counter >= lineArr.length) {
                     getLine();
                     counter = 0;
-                    console.log(g.line.length);
                     if (g.line.length !== 0) {
                         lineArr = g.line.split(" ");
 
@@ -85,8 +84,6 @@ echo "LineId: ".$lineId;
                             g.word.innerHTML = lineArr[counter];
                             counter++;
                         }
-                    } else {
-                        counter++;
                     }
                 } else {
                     // console.log(lineArr[counter]);
