@@ -104,8 +104,7 @@ echo "
         }
         g.lineArr = g.line.split(" ");
 
-        console.log("Speed: " + parseInt(g.wpmSelector.value.replace(' wpm', '')) / 6000)
-        g.interval = setInterval(printLine, parseInt(g.wpmSelector.value.replace(' wpm', '')) / 6000);
+        g.interval = setInterval(printLine, 60000/parseInt(g.wpmSelector.value.replace(' wpm', '')));
 
         // @todo: Handle end of book
         function printLine() {
