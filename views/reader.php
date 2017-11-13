@@ -51,7 +51,7 @@ echo "LineId: ".$lineId;
     function init () {
         g.word = document.querySelector(".word");
         g.wpmSelector = document.querySelector(".wpmSelector");
-        g.line;
+        g.line = '';
         g.btnStart = document.querySelector(".btn-start");
         g.btnStop = document.querySelector(".btn-stop");
 
@@ -62,7 +62,7 @@ echo "LineId: ".$lineId;
     }
 
     function startLines() {
-        if (!g.line) {
+        if (g.line === '') {
             getLine();
         }
         g.lineArr = g.line.split(" ");
