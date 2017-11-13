@@ -1,9 +1,10 @@
-<?php
+<?php session_start();
+
 require_once(__DIR__ . '/../persistence/DAO.php');
 
 $dao = new DAO();
 
-$line = $dao->findLineForAccount('admin');
-$dao->updateLineIdIncrement('admin');
+$line = $dao->findLineForAccount($_SESSION['username']);
+$dao->updateLineIdIncrement($_SESSION['username']);
 
 echo $line;

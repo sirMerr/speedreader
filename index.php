@@ -15,8 +15,8 @@ if (isset($_SESSION['username'])) {
     $lineId = $_SESSION['lineId'];
     echo "Username: ".$username;
     echo "Line Id: ".$lineId;
-    header('Location:/'.'views/reader.php');
-    exit();
+//    header('Location:/'.'views/reader.php');
+//    exit();
 } else {
     header('Location:/'.'views/login.php');
     exit();
