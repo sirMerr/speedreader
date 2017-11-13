@@ -91,7 +91,7 @@ echo "
         g.btnStart = document.querySelector(".btn-start");
         g.btnStop = document.querySelector(".btn-stop");
 
-        g.wpmSelector.addEventListener('onchange', setSpeed);
+        g.wpmSelector.addEventListener('change', setSpeed);
         g.btnStart.addEventListener('click', startLines);
         g.btnStop.addEventListener('click', stopLines);
 
