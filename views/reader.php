@@ -8,7 +8,7 @@ echo "
 <div class='container'>
     <div class='card'>
       <div class='card-body'>
-        <p class='card-text word'>Word</p>
+        <p class='card-text word'></p>
         <div class='container'>
           <div class='row'>
             <div class='col-sm'>
@@ -51,45 +51,45 @@ echo "LineId: ".$lineId;
     function init () {
         g.word = document.querySelector(".word");
         g.wpmSelector = document.querySelector(".wpmSelector");
-        g.line = '';
+        g.line;
         g.btnStart = document.querySelector(".btn-start");
         g.btnStop = document.querySelector(".btn-stop");
 
         g.wpmSelector.addEventListener('onchange', setSpeed);
         g.btnStart.addEventListener('click', startLines);
         g.btnStop.addEventListener('click', stopLines);
-        getLine();
         getSpeed();
     }
 
     function startLines() {
-        if (g.line && g.line !== '') {
-            let lineArr = g.line.split(" ");
-            let counter = 0;
+        if (!g.line) {
+            getLine();
+        }
+        let lineArr = g.line.split(" ");
+        let counter = 0;
 
-            g.interval = setInterval(printLine, Math.round(parseInt(g.wpmSelector.value.replace(' wpm', '')) / 360 * 1000));
+        g.interval = setInterval(printLine, Math.round(parseInt(g.wpmSelector.value.replace(' wpm', '')) / 360 * 1000));
 
-            // @todo: Handle end of book
-            function printLine() {
-                if (lineArr.length === 0 || counter >= lineArr.length) {
-                    getLine();
-                    counter = 0;
-                    if (g.line.length !== 0) {
-                        lineArr = g.line.split(" ");
+        // @todo: Handle end of book
+        function printLine() {
+            if (lineArr.length === 0 || counter >= lineArr.length) {
+                getLine();
+                counter = 0;
+                if (g.line.length !== 0) {
+                    lineArr = g.line.split(" ");
 
-                        if (!lineArr || lineArr.length === 0) {
-                            clearInterval(g.interval);
-                        } else {
-                            // console.log(lineArr[counter]);
-                            g.word.innerHTML = lineArr[counter];
-                            counter++;
-                        }
+                    if (!lineArr || lineArr.length === 0) {
+                        clearInterval(g.interval);
+                    } else {
+                        // console.log(lineArr[counter]);
+                        g.word.innerHTML = lineArr[counter];
+                        counter++;
                     }
-                } else {
-                    // console.log(lineArr[counter]);
-                    g.word.innerHTML = lineArr[counter];
-                    counter++;
                 }
+            } else {
+                // console.log(lineArr[counter]);
+                g.word.innerHTML = lineArr[counter];
+                counter++;
             }
         }
     }
