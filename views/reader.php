@@ -128,7 +128,7 @@ echo "LineId: ".$lineId;
 
     function setSpeed() {
         const xhttp = new XMLHttpRequest();
-        const parameters = `speed=${parseInt(g.wpmSelector.value.replace(' wpm', '')}`;
+        const parameters = `speed=${parseInt(g.wpmSelector.value.replace(' wpm', ''))}`;
 
         xhttp.onreadystatechange = function() {
             if (this.readyState === 4 && this.status === 200) {
