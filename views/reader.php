@@ -104,7 +104,8 @@ echo "
         }
         g.lineArr = g.line.split(" ");
 
-        g.interval = setInterval(printLine, Math.round(parseInt(g.wpmSelector.value.replace(' wpm', '')) / 360 * 1000));
+        console.log("Speed: " + parseInt(g.wpmSelector.value.replace(' wpm', '')) / 6000)
+        g.interval = setInterval(printLine, parseInt(g.wpmSelector.value.replace(' wpm', '')) / 6000);
 
         // @todo: Handle end of book
         function printLine() {
@@ -169,6 +170,7 @@ echo "
         const parameters = `speed=${parseInt(g.wpmSelector.value.replace(' wpm', ''))}`;
 
         xhttp.onreadystatechange = function() {
+            console.log(this.status);
             if (this.readyState === 4 && this.status === 200) {
                 console.log(this.responseText);
             }
