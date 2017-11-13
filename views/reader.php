@@ -66,7 +66,7 @@ echo "LineId: ".$lineId;
                 g.word.innerHTML = this.responseText;
             }
         };
-        xhttp.open("GET", "../webapp/line.php", true);
+        xhttp.open("GET", "../ajax/line.php", true);
         xhttp.send();
     }
 
