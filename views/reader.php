@@ -16,14 +16,14 @@ echo "
         display: flex;
         justify-content: center;
         min-height: 40px;
+        padding-top: 9px;
+        padding-bottom: 9px;
     }
     
     .word {
         text-align: left;
         width: 200px;
         white-space: pre;
-        padding-top: 9px;
-        padding-bottom: 9px;
         font-size: 32px;
         font-family: 'Courier', sans-serif;
 
@@ -139,7 +139,6 @@ echo "
 
         xhttp.onreadystatechange = function() {
             if (this.readyState === 4 && this.status === 200) {
-                console.log(this.responseText);
                 g.line = this.responseText;
             }
         };
@@ -152,7 +151,6 @@ echo "
 
         xhttp.onreadystatechange = function() {
             if (this.readyState === 4 && this.status === 200) {
-                console.log(this.responseText);
                 g.wpmSelector.value = this.responseText + " wpm";
             }
         };
@@ -167,7 +165,6 @@ echo "
         const parameters = `speed=${parseInt(g.wpmSelector.value.replace(' wpm', ''))}`;
 
         xhttp.onreadystatechange = function() {
-            console.log(this.status);
             if (this.readyState === 4 && this.status === 200) {
                 console.log(this.responseText);
             }
@@ -194,7 +191,8 @@ echo "
        const length = word.length;
        let result = "<span class='wordStart'>";
        if (length === 1) {
-           result += `</span><span class='pivot'>    ${word}</span>`;
+           result += `</span><span class='pivot'>    `;
+           result += `${word}</span>`;
        } else if (length >=2 && length <=5) {
            result += `   ${word.slice(0,1)}</span>`;
            result += `<span class='pivot'>${word.charAt(1)}`;
