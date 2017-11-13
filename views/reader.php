@@ -10,7 +10,7 @@ echo "
         color: red;
     }
     
-    .word {
+    .word-container {
         text-align: center;
         font-size: 32px;
         font-family: 'Droid Sans Mono', sans-serif;
@@ -18,6 +18,10 @@ echo "
         padding-bottom: 9px;
         min-height: 40px;
         white-space: pre;
+    }
+    
+    .word {
+        text-align: left;
     }
     
     .vertical-center {
@@ -33,7 +37,9 @@ echo "
 <div class='container'>
     <div class='card'>
       <div class='card-body'>
-        <div class='card-text word'>
+        <div class='card-text word-container'>
+            <div class='word'></div>
+        </div>
         <div class='container'>
           <div class='row' style='justify-content: center'>
             <div class='col-md-auto'>
@@ -48,7 +54,6 @@ for ($i = 150; $i < 2000; $i+=50) {
 
 echo "
             </select>
-            </div>
           </div>
                 <div class='col-md-auto'>
                   <button type='button' class='btn btn-success btn-start'>Start</button>
