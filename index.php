@@ -8,15 +8,18 @@ echo "
 
 
 if (isset($_SESSION['username'])) {
+    $username = $_SESSION['username'];
+
     // Set profile
+    echo "Username: ".$username;
+
     $_SESSION['lineId'] = $dao->findLineIdForAccount($_SESSION['username']);
 
-    $username = $_SESSION['username'];
     $lineId = $_SESSION['lineId'];
-    echo "Username: ".$username;
-    echo "Line Id: ".$lineId;
-//    header('Location:/'.'views/reader.php');
-//    exit();
+
+    echo "Line ID: ".$lineId;
+    header('Location:/'.'views/reader.php');
+    exit();
 } else {
     header('Location:/'.'views/login.php');
     exit();
