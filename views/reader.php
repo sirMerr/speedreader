@@ -52,6 +52,8 @@ echo "LineId: ".$lineId;
         g.word = document.querySelector(".word");
         g.wpmSelector = document.querySelector(".wpmSelector");
         g.line = '';
+        g.counter = 0;
+
         g.btnStart = document.querySelector(".btn-start");
         g.btnStop = document.querySelector(".btn-stop");
 
@@ -66,7 +68,6 @@ echo "LineId: ".$lineId;
             getLine();
         }
         g.lineArr = g.line.split(" ");
-        g.counter = 0;
 
         g.interval = setInterval(printLine, Math.round(parseInt(g.wpmSelector.value.replace(' wpm', '')) / 360 * 1000));
 
@@ -127,6 +128,8 @@ echo "LineId: ".$lineId;
     }
 
     function setSpeed() {
+        clearInterval(g.interval);
+
         const xhttp = new XMLHttpRequest();
         const parameters = `speed=${parseInt(g.wpmSelector.value.replace(' wpm', ''))}`;
 
@@ -136,7 +139,10 @@ echo "LineId: ".$lineId;
             }
         };
         xhttp.open("POST", "../ajax/updateSpeed.php", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhttp.send(parameters);
+
+        startLines();
     }
 
 </script>
