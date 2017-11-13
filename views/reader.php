@@ -28,7 +28,7 @@ echo "
               <button type='button' class='btn btn-success btn-start'>Start</button>
             </div>
             <div class='col-sm'>
-              <button type='button' class='btn btn-danger btn-start'>Stop</button>
+              <button type='button' class='btn btn-danger btn-stop'>Stop</button>
             </div>
           </div>
         </div>
