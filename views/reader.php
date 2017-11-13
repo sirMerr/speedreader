@@ -73,7 +73,7 @@ echo "LineId: ".$lineId;
             function printLine() {
                 if (counter >= lineArr.length) {
                     getLine();
-
+                    counter = 0;
                     console.log(g.line.length);
                     if (g.line.length !== 0) {
                         lineArr = g.line.split(" ");
