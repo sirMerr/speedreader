@@ -128,15 +128,15 @@ echo "LineId: ".$lineId;
 
     function setSpeed() {
         const xhttp = new XMLHttpRequest();
-        const parameters = `speed=${g.wpmSelector.value}`;
+        const parameters = `speed=${parseInt(g.wpmSelector.value.replace(' wpm', '')}`;
 
         xhttp.onreadystatechange = function() {
             if (this.readyState === 4 && this.status === 200) {
                 console.log(this.responseText);
             }
         };
-        xhttp.open("POST", "../ajax/speed.php", true);
-        xhttp.send();
+        xhttp.open("POST", "../ajax/updateSpeed.php", true);
+        xhttp.send(parameters);
     }
 
 </script>
