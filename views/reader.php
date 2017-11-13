@@ -69,17 +69,21 @@ echo "LineId: ".$lineId;
 
             g.interval = setInterval(printLine, Math.round(parseInt(g.wpmSelector.value.replace(' wpm', '')) / 360 * 1000));
 
+            // @todo: Handle end of book
             function printLine() {
                 if (counter >= lineArr.length) {
                     getLine();
-                    lineArr = g.line.split(" ");
 
-                    if (!lineArr || lineArr.length === 0) {
-                        clearInterval(g.interval);
-                    } else {
-                        // console.log(lineArr[counter]);
-                        g.word.innerHTML = lineArr[counter];
-                        counter++;
+                    if (g.line !== '') {
+                        lineArr = g.line.split(" ");
+
+                        if (!lineArr || lineArr.length === 0) {
+                            clearInterval(g.interval);
+                        } else {
+                            // console.log(lineArr[counter]);
+                            g.word.innerHTML = lineArr[counter];
+                            counter++;
+                        }
                     }
                 } else {
                     // console.log(lineArr[counter]);
