@@ -64,17 +64,25 @@ echo "LineId: ".$lineId;
 
     function startLines() {
         if (g.line && g.line !== '') {
-            const lineArr = g.line.split(" ");
+            let lineArr = g.line.split(" ");
             let counter = 0;
-
 
             g.interval = setInterval(printLine, Math.round(parseInt(g.wpmSelector.value.replace(' wpm', '')) / 360 * 1000));
 
             function printLine() {
                 if (counter >= lineArr.length) {
-                    clearInterval(g.interval);
+                    getLine();
+                    lineArr = g.line.split(" ");
+
+                    if (!lineArr || lineArr.length === 0) {
+                        clearInterval(g.interval);
+                    } else {
+                        // console.log(lineArr[counter]);
+                        g.word.innerHTML = lineArr[counter];
+                        counter++;
+                    }
                 } else {
-                    console.log(lineArr[counter]);
+                    // console.log(lineArr[counter]);
                     g.word.innerHTML = lineArr[counter];
                     counter++;
                 }
