@@ -65,31 +65,31 @@ echo "LineId: ".$lineId;
         if (!g.line) {
             getLine();
         }
-        let lineArr = g.line.split(" ");
-        let counter = 0;
+        g.lineArr = g.line.split(" ");
+        g.counter = 0;
 
         g.interval = setInterval(printLine, Math.round(parseInt(g.wpmSelector.value.replace(' wpm', '')) / 360 * 1000));
 
         // @todo: Handle end of book
         function printLine() {
-            if (lineArr.length === 0 || counter >= lineArr.length) {
+            if (g.lineArr.length === 0 || g.counter >= g.lineArr.length) {
                 getLine();
-                counter = 0;
+                g.counter = 0;
                 if (g.line.length !== 0) {
-                    lineArr = g.line.split(" ");
+                    g.lineArr = g.line.split(" ");
 
-                    if (!lineArr || lineArr.length === 0) {
+                    if (!g.lineArr || g.lineArr.length === 0) {
                         clearInterval(g.interval);
                     } else {
                         // console.log(lineArr[counter]);
-                        g.word.innerHTML = lineArr[counter];
-                        counter++;
+                        g.word.innerHTML = g.lineArr[g.counter];
+                        g.counter++;
                     }
                 }
             } else {
                 // console.log(lineArr[counter]);
-                g.word.innerHTML = lineArr[counter];
-                counter++;
+                g.word.innerHTML = g.lineArr[g.counter];
+                g.counter++;
             }
         }
     }
