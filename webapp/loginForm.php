@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 
 // This is to help see where the errors are in the web server
 // Source: https://stackoverflow.com/questions/1475297/phps-white-screen-of-death

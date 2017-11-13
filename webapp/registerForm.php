@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 require_once(__DIR__ . '/../persistence/DAO.php');
 
 // Validate that access is only through a POST request,
