@@ -85,6 +85,8 @@ echo "LineId: ".$lineId;
                             g.word.innerHTML = lineArr[counter];
                             counter++;
                         }
+                    } else {
+                        counter++;
                     }
                 } else {
                     // console.log(lineArr[counter]);
