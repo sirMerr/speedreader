@@ -114,6 +114,7 @@ function login($username, $password) {
 
             echo "
             <script>
+            console.log(\"Hi!\");
             console.log(\"$_SESSION\"); 
 </script>
             ";

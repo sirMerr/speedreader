@@ -188,7 +188,7 @@ class DAO{
     /**
      * Find line text of the book that a user is at
      * @param $username
-     * @return text of the line
+     * @return string text of the line
      * @internal param $password
      */
     function findLineForAccount($username) {
