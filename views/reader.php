@@ -74,7 +74,8 @@ echo "LineId: ".$lineId;
                 if (counter >= lineArr.length) {
                     getLine();
 
-                    if (g.line !== '') {
+                    console.log(g.line);
+                    if (g.line !== '' && g.line !== '\n') {
                         lineArr = g.line.split(" ");
 
                         if (!lineArr || lineArr.length === 0) {
