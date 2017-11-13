@@ -15,8 +15,7 @@ echo "
     .word-container {
         display: flex;
         justify-content: center;
-        letter-spacing: 10px;
-        text-indent: 0.9em;
+        min-height: 40px;
     }
     
     .word {
@@ -25,9 +24,8 @@ echo "
         white-space: pre;
         padding-top: 9px;
         padding-bottom: 9px;
-        min-height: 40px;
         font-size: 32px;
-        font-family: 'Droid Sans Mono', sans-serif;
+        font-family: 'Courier', sans-serif;
 
     }
     
