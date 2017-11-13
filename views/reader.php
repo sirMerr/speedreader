@@ -15,7 +15,7 @@ echo "
     .word-container {
         display: flex;
         justify-content: center;
-        min-height: 48px;
+        min-height: 66px;
         padding-top: 9px;
         padding-bottom: 9px;
     }
