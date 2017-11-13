@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2965379-9707-4adc-a297-99f635214a99" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/speed.php" afterPath="$PROJECT_DIR$/ajax/speed.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -73,8 +73,8 @@
       <file leaf-file-name="reader.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/reader.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="85" column="25" lean-forward="true" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
+            <state relative-caret-position="240">
+              <caret line="16" column="49" lean-forward="true" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
               <folding>
                 <marker date="1510546711000" expanded="true" signature="263:615" ph="..." />
                 <marker date="1510546711000" expanded="true" signature="286:615" ph="..." />
@@ -90,7 +90,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="updateSpeed.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+              <folding>
+                <marker date="1510547129000" expanded="true" signature="31:40" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updateSpeed.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ajax/updateSpeed.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
@@ -115,16 +127,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
               <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logout.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/logout.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -217,7 +219,6 @@
         <option value="$PROJECT_DIR$/views/register.php" />
         <option value="$PROJECT_DIR$/webapp/logout.php" />
         <option value="$PROJECT_DIR$/webapp/registerForm.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/webapp/line.php" />
         <option value="$PROJECT_DIR$/webapp/speed.php" />
         <option value="$PROJECT_DIR$/db/scrapper.php" />
@@ -225,8 +226,9 @@
         <option value="$PROJECT_DIR$/webapp/loginForm.php" />
         <option value="$PROJECT_DIR$/persistence/DAO.php" />
         <option value="$PROJECT_DIR$/ajax/line.php" />
-        <option value="$PROJECT_DIR$/views/reader.php" />
         <option value="$PROJECT_DIR$/ajax/speed.php" />
+        <option value="$PROJECT_DIR$/views/reader.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -336,6 +338,9 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ajax" />
     </key>
@@ -387,7 +392,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46116000" />
+    <option name="totallyTimeSpent" value="46726000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="377" y="23" width="1048" height="809" extended-state="0" />
@@ -627,7 +632,7 @@
         <state relative-caret-position="120">
           <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <marker date="1510523032000" expanded="true" signature="31:40" ph="..." />
+            <marker date="1510547129000" expanded="true" signature="31:40" ph="..." />
           </folding>
         </state>
       </provider>
@@ -697,16 +702,6 @@
             <marker date="1510521628000" expanded="true" signature="264:287" ph="..." />
             <marker date="1510521628000" expanded="true" signature="424:460" ph="..." />
             <marker date="1510521628000" expanded="true" signature="813:855" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-          <folding>
-            <marker date="1510523032000" expanded="true" signature="31:40" ph="..." />
           </folding>
         </state>
       </provider>
@@ -807,24 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/reader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="85" column="25" lean-forward="true" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
-          <folding>
-            <marker date="1510546711000" expanded="true" signature="263:615" ph="..." />
-            <marker date="1510546711000" expanded="true" signature="286:615" ph="..." />
-            <marker date="1510546711000" expanded="true" signature="316:615" ph="..." />
-            <marker date="1510546711000" expanded="true" signature="391:615" ph="..." />
-            <marker date="1510546711000" expanded="true" signature="419:615" ph="..." />
-            <marker date="1510546711000" expanded="true" signature="452:615" ph="..." />
-            <marker date="1510546711000" expanded="true" signature="524:615" ph="..." />
-            <marker date="1510546711000" expanded="true" signature="765:859" ph="..." />
-            <marker date="1510546711000" expanded="true" signature="892:984" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ajax/line.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -846,6 +823,34 @@
         <state relative-caret-position="105">
           <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/reader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="49" lean-forward="true" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+          <folding>
+            <marker date="1510546711000" expanded="true" signature="263:615" ph="..." />
+            <marker date="1510546711000" expanded="true" signature="286:615" ph="..." />
+            <marker date="1510546711000" expanded="true" signature="316:615" ph="..." />
+            <marker date="1510546711000" expanded="true" signature="391:615" ph="..." />
+            <marker date="1510546711000" expanded="true" signature="419:615" ph="..." />
+            <marker date="1510546711000" expanded="true" signature="452:615" ph="..." />
+            <marker date="1510546711000" expanded="true" signature="524:615" ph="..." />
+            <marker date="1510546711000" expanded="true" signature="765:859" ph="..." />
+            <marker date="1510546711000" expanded="true" signature="892:984" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <marker date="1510547129000" expanded="true" signature="31:40" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
