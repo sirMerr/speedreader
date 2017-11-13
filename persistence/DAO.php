@@ -182,7 +182,6 @@ class DAO{
 
         $lineId = $stmt -> fetch();
 
-        echo "Line id!: ".$lineId;
         return $lineId[0];
     }
 
