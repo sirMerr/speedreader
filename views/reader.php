@@ -33,13 +33,13 @@ echo "
 <div class='container'>
     <div class='card'>
       <div class='card-body'>
-        <div class='card-text word'></div>
-        <div class='container'>
-          <div class='row' style='justify-content: center'>
-            <div class='col-md-auto'>
-              <select id='inputState' class='form-control wpmSelector'>
-                <option>50 wpm</option>
-                <option selected>100 wpm</option>
+        <div class='card-text word'>
+            <div class='container'>
+              <div class='row' style='justify-content: center'>
+                <div class='col-md-auto'>
+                  <select id='inputState' class='form-control wpmSelector'>
+                    <option>50 wpm</option>
+                    <option selected>100 wpm</option>
 ";
 
 for ($i = 150; $i < 2000; $i+=50) {
@@ -47,8 +47,8 @@ for ($i = 150; $i < 2000; $i+=50) {
 }
 
 echo "
-            </select>
-          </div>
+                    </select>
+                </div>
                 <div class='col-md-auto'>
                   <button type='button' class='btn btn-success btn-start'>Start</button>
                 </div>
