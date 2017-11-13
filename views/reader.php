@@ -12,7 +12,7 @@ echo "
         <div class='container'>
           <div class='row'>
             <div class='col-sm'>
-              <select id='inputState' class='form-control'>
+              <select id='inputState' class='form-control wpmSelector'>
                 <option>50 wpm</option>
                 <option selected>100 wpm</option>
 ";
@@ -40,12 +40,16 @@ echo "
 ?>
 
 <script>
+    const g = {};
     window.onload=init;
 
     function init () {
-        const word = document.querySelector(".word");
+        g.word = document.querySelector(".word");
+        g.wpmSelector = document.querySelector(".wpmSelector");
 
+        g.wpmSelector.addEventListener('onchange', setSpeed);
         getLine();
+        getSpeed();
     }
 
     function getLine() {
@@ -54,10 +58,37 @@ echo "
         xhttp.onreadystatechange = function() {
             if (this.readyState === 4 && this.status === 200) {
                 console.log(this.responseText);
-                document.querySelector(".word").innerHTML = this.responseText;
+                g.word.innerHTML = this.responseText;
             }
         };
-        xhttp.open("GET", "../webapp/line.php", true); // <-- not sure what should be going here
+        xhttp.open("GET", "../webapp/line.php", true);
         xhttp.send();
     }
+
+    function getSpeed() {
+        const xhttp = new XMLHttpRequest();
+
+        xhttp.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200) {
+                console.log(this.responseText);
+                g.wpmSelector.value = this.responseText;
+            }
+        };
+        xhttp.open("GET", "../ajax/speed.php", true);
+        xhttp.send();
+    }
+
+    function setSpeed() {
+        const xhttp = new XMLHttpRequest();
+        const parameters = `speed=${g.wpmSelector.value}`;
+
+        xhttp.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200) {
+                console.log(this.responseText);
+            }
+        };
+        xhttp.open("POST", "../ajax/speed.php", true);
+        xhttp.send();
+    }
+
 </script>

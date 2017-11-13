@@ -209,6 +209,26 @@ class DAO{
     }
 
     /**
+     * Find wpm for a user
+     * @param $username
+     * @return mixed
+     */
+    function findSpeed($username) {
+        $query = "SELECT wpm FROM accounts 
+                  WHERE username=?
+                 ";
+
+        $stmt = $this -> pdo -> prepare($query);
+        $stmt -> bindParam(1, $username);
+
+        $stmt -> execute();
+
+        $speed = $stmt -> fetch();
+
+        return $speed[0];
+    }
+
+    /**
      * Find number of login attempts for a user
      *
      * @param $username
@@ -240,6 +260,22 @@ class DAO{
 
         $stmt = $this -> pdo -> prepare($query);
         $stmt -> bindParam(1, $username);
+
+        $stmt->execute();
+    }
+
+    /**
+     * Update wpm for a user
+     *
+     * @param $username
+     * @param $newSpeed
+     */
+    function updateSpeed($username, $newSpeed) {
+        $query = "UPDATE accounts SET wpm=? WHERE username=?";
+
+        $stmt = $this -> pdo -> prepare($query);
+        $stmt -> bindParam(1, $newSpeed);
+        $stmt -> bindParam(2, $username);
 
         $stmt->execute();
     }
