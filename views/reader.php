@@ -71,7 +71,7 @@ echo "LineId: ".$lineId;
             g.interval = setInterval(printLine, Math.round(parseInt(g.wpmSelector.value.replace(' wpm', '')) / 360 * 1000));
 
             function printLine() {
-                if (counter >= lineArr.length - 1) {
+                if (counter >= lineArr.length) {
                     clearInterval(g.interval);
                 } else {
                     console.log(lineArr[counter]);
