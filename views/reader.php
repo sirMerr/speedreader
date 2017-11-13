@@ -70,8 +70,8 @@ echo "LineId: ".$lineId;
             g.interval = setInterval(printLine, Math.round(g.wpmSelector.value / 60 * 1000));
 
             function printLine() {
-                if (counter >= lineArr.length) {
-                    clearInterval(interval);
+                if (counter >= lineArr.length - 1) {
+                    clearInterval(g.interval);
                 } else {
                     g.word.innerHTML = lineArr[counter];
                     counter++;
