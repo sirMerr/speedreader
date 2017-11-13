@@ -11,17 +11,20 @@ echo "
     }
     
     .word-container {
-        text-align: center;
-        font-size: 32px;
-        font-family: 'Droid Sans Mono', sans-serif;
-        padding-top: 9px;
-        padding-bottom: 9px;
-        min-height: 40px;
-        white-space: pre;
+        display: flex;
+        justify-content: center;
     }
     
     .word {
         text-align: left;
+        width: 200px;
+        white-space: pre;
+        padding-top: 9px;
+        padding-bottom: 9px;
+        min-height: 40px;
+        font-size: 32px;
+        font-family: 'Droid Sans Mono', sans-serif;
+
     }
     
     .vertical-center {
