@@ -67,7 +67,7 @@ echo "LineId: ".$lineId;
             const lineArr = g.line.split(" ");
             let counter = 0;
 
-            g.interval = setInterval(printLine, Math.round(g.wpmSelector.value / 60 * 1000));
+            g.interval = setInterval(printLine, Math.round(g.wpmSelector.value / 360 * 1000));
 
             function printLine() {
                 if (counter >= lineArr.length - 1) {
