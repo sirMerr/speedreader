@@ -5,6 +5,23 @@ echo "
 ";
 
 echo "
+<style>
+    .pivot {
+        color: red;
+    }
+    
+    .word {
+        text-align: center;
+        font-size: 32px;
+        font-family: 'Droid Sans Mono', sans-serif;
+        padding-top: 9px;
+        padding-bottom: 9px;
+        min-height: 40px;
+    }
+</style>
+";
+
+echo "
 <div class='container'>
     <div class='card'>
       <div class='card-body'>
@@ -49,8 +66,9 @@ echo "LineId: ".$lineId;
     window.onload=init;
 
     function init () {
-        g.word = document.querySelector(".word");
+        g.wordCanvas = document.querySelector("wordCanvas");
         g.wpmSelector = document.querySelector(".wpmSelector");
+        g.word = document.querySelector(".word");
         g.line = '';
         g.counter = 0;
 
@@ -60,6 +78,7 @@ echo "LineId: ".$lineId;
         g.wpmSelector.addEventListener('onchange', setSpeed);
         g.btnStart.addEventListener('click', startLines);
         g.btnStop.addEventListener('click', stopLines);
+
         getSpeed();
     }
 
@@ -83,13 +102,13 @@ echo "LineId: ".$lineId;
                         clearInterval(g.interval);
                     } else {
                         // console.log(lineArr[counter]);
-                        g.word.innerHTML = g.lineArr[g.counter];
+                        g.word.innerHTML = position(g.lineArr[g.counter]);
                         g.counter++;
                     }
                 }
             } else {
                 // console.log(lineArr[counter]);
-                g.word.innerHTML = g.lineArr[g.counter];
+                g.word.innerHTML = position(g.lineArr[g.counter]);
                 g.counter++;
             }
         }
@@ -143,6 +162,45 @@ echo "LineId: ".$lineId;
         xhttp.send(parameters);
 
         startLines();
+    }
+
+    /**
+     * Positions the word for display
+     *
+     * length = 1 => 1st letter    // ____a or 4 spaces before
+     * length = 2-5 => 2nd letter  // ___four or 3 spaces before
+     * length = 6-9 => third letter      // __embassy 2 spaces
+     * length = 10-13 => fourth letter   // _playground 1 spaces
+     * length >13 => fifth letter        // acknowledgement no spaces
+     * @param word
+     * @returns {string}
+     */
+    function position(word) {
+       const length = word.length;
+       let result = "<span class='wordStart'>";
+       if (length === 1) {
+           result += `</span><span class='pivot'>${word}</span>`;
+       } else if (length >=2 && length <=5) {
+           result += `${word.slice(0,1)}</span>`;
+           result += `<span class='pivot'>${word.charAt(1)}`;
+           if (length > 2) {
+               result += `</span><span class='wordEnd'>${word.slice(2)}`;
+           }
+       } else if (length >=6 && length <=9) {
+           result += `${word.slice(0,2)}</span>`;
+           result += `<span class='pivot'>${word.charAt(2)}</span>`;
+           result += `<span class='wordEnd'>${word.slice(3)}`;
+       } else if (length >=10 && length <=13) {
+           result += `${word.slice(0,3)}</span>`;
+           result += `<span class='pivot'>${word.charAt(3)}</span>`;
+           result += `<span class='wordEnd'>${word.slice(4)}`;
+       } else if (length > 13) {
+           result += `${word.slice(0,4)}</span>`;
+           result += `<span class='pivot'>${word.charAt(4)}</span>`;
+           result += `<span class='wordEnd'>${word.slice(5)}`;
+       }
+
+       return result + '</span>';
     }
 
 </script>
