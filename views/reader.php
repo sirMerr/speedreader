@@ -21,7 +21,6 @@ for ($i = 150; $i < 2000; $i+=50) {
     echo "<option>$i wpm</option>";
 }
 
-echo "$wat"."<br>";
 echo "
          </select>
       </div>
@@ -37,8 +36,14 @@ echo "
     <a role='button' class='btn btn-link' href='../webapp/logout.php'>Logout</a>
 </div>
 ";
-?>
 
+print_r($_SESSION);
+$username = $_SESSION['username'];
+$lineId = $_SESSION['lineId'];
+
+echo "Username: ".$username;
+echo "LineId: ".$lineId;
+?>
 <script>
     const g = {};
     window.onload=init;
