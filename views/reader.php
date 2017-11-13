@@ -9,11 +9,14 @@ echo "
     .pivot {
         color: red;
         text-decoration: overline underline;
+        width: ;
     }
     
     .word-container {
         display: flex;
         justify-content: center;
+        letter-spacing: 10px;
+        text-indent: 0.9em;
     }
     
     .word {
