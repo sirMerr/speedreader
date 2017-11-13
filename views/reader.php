@@ -8,6 +8,7 @@ echo "
 <style>
     .pivot {
         color: red;
+        text-decoration: overline underline;
     }
     
     .word-container {
