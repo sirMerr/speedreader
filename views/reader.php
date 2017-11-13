@@ -110,7 +110,6 @@ echo "LineId: ".$lineId;
             if (this.readyState === 4 && this.status === 200) {
                 console.log(this.responseText);
                 g.line = this.responseText;
-                g.word.innerHTML = g.line;
             }
         };
         xhttp.open("GET", "../ajax/line.php", true);
