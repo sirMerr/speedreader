@@ -10,19 +10,9 @@ if (isset($_SESSION['username'])) {
     // Set profile
     $_SESSION['lineId'] = $dao->findLineIdForAccount($_SESSION['username']);
 
-    echo "
-    <div class='container'>
-        <h1>Found session</h1>
-    </div>
-    ";
     header('Location:/'.'views/reader.php');
     exit();
 } else {
-    echo "
-    <div class='container'>
-        <h1>No session</h1>
-    </div>
-    ";
     header('Location:/'.'views/login.php');
     exit();
 }

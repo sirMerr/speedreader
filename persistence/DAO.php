@@ -205,7 +205,7 @@ class DAO{
 
         $line = $stmt -> fetch();
 
-        return $line;
+        return $line[0];
     }
 
     /**
