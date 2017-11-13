@@ -181,19 +181,19 @@ echo "
        const length = word.length;
        let result = "<span class='wordStart'>";
        if (length === 1) {
-           result += `</span><span class='pivot'>${word}</span>`;
+           result += `</span><span class='pivot'>    ${word}</span>`;
        } else if (length >=2 && length <=5) {
-           result += `${word.slice(0,1)}</span>`;
+           result += `   ${word.slice(0,1)}</span>`;
            result += `<span class='pivot'>${word.charAt(1)}`;
            if (length > 2) {
                result += `</span><span class='wordEnd'>${word.slice(2)}`;
            }
        } else if (length >=6 && length <=9) {
-           result += `${word.slice(0,2)}</span>`;
+           result += `  ${word.slice(0,2)}</span>`;
            result += `<span class='pivot'>${word.charAt(2)}</span>`;
            result += `<span class='wordEnd'>${word.slice(3)}`;
        } else if (length >=10 && length <=13) {
-           result += `${word.slice(0,3)}</span>`;
+           result += ` ${word.slice(0,3)}</span>`;
            result += `<span class='pivot'>${word.charAt(3)}</span>`;
            result += `<span class='wordEnd'>${word.slice(4)}`;
        } else if (length > 13) {
