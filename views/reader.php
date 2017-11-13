@@ -17,6 +17,7 @@ echo "
         padding-top: 9px;
         padding-bottom: 9px;
         min-height: 40px;
+        white-space: pre;
     }
     
     .vertical-center {
