@@ -56,7 +56,7 @@ echo "
                 document.querySelector(".word").innerHTML = this.responseText;
             }
         };
-        xhttp.open("GET", "line.php", true); // <-- not sure what should be going here
+        xhttp.open("GET", "../webapp/line.php", true); // <-- not sure what should be going here
         xhttp.send();
     }
 </script>

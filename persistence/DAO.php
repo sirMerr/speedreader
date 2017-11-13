@@ -229,6 +229,21 @@ class DAO{
 
         return $loginAttempts[0];
     }
+
+    /**
+     * Increments login attempts
+     *
+     * @param $username
+     */
+    function updateLineIdIncrement($username) {
+        $query = "UPDATE accounts SET line_id=accounts.line_id+1 WHERE username=?";
+
+        $stmt = $this -> pdo -> prepare($query);
+        $stmt -> bindParam(1, $username);
+
+        $stmt->execute();
+    }
+
     /**
      * Increments login attempts
      *
