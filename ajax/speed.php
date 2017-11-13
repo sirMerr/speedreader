@@ -5,4 +5,4 @@ $dao = new DAO();
 
 $speed = $dao->findSpeed('admin');
 
-return $speed;
+echo $speed;
