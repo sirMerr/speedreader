@@ -2,7 +2,6 @@
 
 require_once(__DIR__ . '/../persistence/DAO.php');
 
-$loginErr = "";
 // Validate that access is only through a POST request,
 // redirect to index.php if not
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -25,12 +24,11 @@ function login($username, $password) {
     // Use DAO to get login attempts
     if ($dao->findLoginAttempts($username) >= 3) {
         echo "
-            <div class='alert alert-danger' role='alert'>
+            <div class='alert alert-danger' role='alert' style='margin-bottom: 0'>
                 You've had too many login attempts. This account
                 has been locked until further notice.
             </div>
         ";
-        $loginErr = "Too many attempts!!!!";
     } else {
         $hash = $dao->findHash($username);
         // Authenticate user, update time
@@ -39,11 +37,10 @@ function login($username, $password) {
             $dao->updateLoginAttemptsIncrement($username);
             // Redirect to error page, or back to login with error message
             echo "
-            <div class='alert alert-danger' role='alert'>
+            <div class='alert alert-danger' role='alert' style='margin-bottom: 0'>
                 Wrong password, please try again!
             </div>
         ";
-            $loginErr = "Wrong password!!!!";
         } else {
             $dao->updateResetLoginAttempts($username);
 
@@ -52,7 +49,7 @@ function login($username, $password) {
             $_SESSION['lineId'] = $dao->findLineIdForAccount($_SESSION['username']);
             session_regenerate_id();
 
-            header('Location:/'.'../views/reader.php');
+            header('Location:/'.'views/reader.php');
             exit();
         }
     }
@@ -64,7 +61,6 @@ function login($username, $password) {
 <div class='jumbotron' style='display: flex; height: 100vh; align-items: center'>
     <div class='container'>
         <h1>Sign In</h1>
-        <h2><?php echo $loginErr?></h2>
         <form action="<?php echo htmlentities($_SERVER["PHP_SELF"]);?>" method='POST' id='loginForm'>
           <div class='form-group'>
             <label for='username'>Username</label>
