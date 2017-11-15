@@ -178,7 +178,11 @@ echo "
             g.word.innerHTML = position(g.lineArr[g.counter]);
             g.counter++;
 
-            if (g.lineArr[g.counter].match(/[.,;?!]$/)) {
+            if (g.lineArr[g.counter].length === 0) {
+                setTimeout(()=> {
+                    console.log('Waited because of new line');
+                }, g.perMS * 4);
+            } else if (g.lineArr[g.counter].match(/[.,;?!]$/)) {
                 setTimeout(()=> {
                     console.log('Waited because of a period');
                 }, g.perMS * 2);
