@@ -166,8 +166,7 @@ echo "
                         setTimeout(()=> {
                             console.log('Waited because of new line');
                         }, g.perMS * 4);
-                    }
-                    if (g.lineArr[g.counter].match(/[.,;?!]$/)) {
+                    } else if (g.lineArr[g.counter].match(/[.,;?!]$/)) {
                         setTimeout(()=> {
                             console.log('Waited because of a period');
                         }, g.perMS * 2);
