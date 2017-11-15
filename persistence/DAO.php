@@ -128,8 +128,6 @@ class DAO{
                  ";
 
         $stmt = $this -> pdo -> prepare($query);
-        $stmt -> bindParam(1, $username);
-
         $stmt -> execute();
 
         $maxId = $stmt -> fetch();
