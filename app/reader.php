@@ -4,6 +4,11 @@
  * will read out each word of a chosen book at a
  * certain speed for its user.
  *
+ * Note that the specific word the user is reading
+ * is not saved as the specs did not require this.
+ * As so, when the user logs back in, it will continue
+ * from the beginning of the line the user stopped at.
+ *
  * @author Tiffany Le-Nguyen
  */
 
@@ -13,6 +18,7 @@ if (!isset($_SESSION['username'])) {
     header('Location:/'.'../app/login.php');
     exit();
 }
+
 echo "
 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css' integrity='sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb' crossorigin='anonymous'>
 ";
@@ -126,12 +132,14 @@ echo "
         // Disable button so user does not have multiple intervals
         g.btnStart.disabled = true;
 
-        // Make sure first iterance of line is set
-        // @todo Add another condition for max size
+        // Make sure first iteration of line is set
         while (getLineId() <= g.totalLines && (g.line === '\n' || g.line === '')) {
             getLine();
+            // No setting interval here because we don't want to make
+            // the user wait before starting to read.
         }
 
+        // This is the interval in milliseconds that will be used in our setInterval
         g.perMS = 60000/parseInt(g.wpmSelector.value.replace(' wpm', ''));
 
         // Set interval based on wpm
@@ -155,14 +163,14 @@ echo "
         // If counter is 0, this means the array has yet to be set.
         if (g.counter === 0) {g.lineArr = g.line.split(" "); }
 
-        console.log("Line: " + g.line);
-        console.log("LineArr: " + g.lineArr);
+        // console.log("Line: " + g.line);
+        // console.log("LineArr: " + g.lineArr);
 
         // If empty line, wait 4x wpm
         if (g.lineArr.length === 1 && g.lineArr[g.counter] === '\n') {
             // Timeout for new line
             setTimeout(()=> {
-                console.log('Waited because of new line');
+                // console.log('Waited because of new line');
             }, g.perMS * 4);
 
             g.counter = 0;
@@ -178,7 +186,7 @@ echo "
             // Pauses the flow if it's a punctuation
             if (g.lineArr[g.counter].match(/[.,;?!]$/)) {
                 setTimeout(() => {
-                    console.log('Waited because of a period: ' + g.lineArr[g.counter]);
+                    // console.log('Waited because of a period: ' + g.lineArr[g.counter]);
                 }, g.perMS * 2);
             }
 
@@ -196,7 +204,7 @@ echo "
      */
     function checkEndBook() {
         if (getLineId() >= g.totalLines) {
-            console.log("End of book");
+            // console.log("End of book");
             clearInterval(g.interval);
             g.btnStart.disabled = true;
             g.btnStop.disabled = true;
@@ -244,7 +252,7 @@ echo "
 
         xhttp.onreadystatechange = function() {
             if (this.readyState === 4 && this.status === 200) {
-                console.log("New line id: " + this.responseText)
+                // console.log("New line id: " + this.responseText)
             }
         };
         xhttp.open("POST", "../ajax/ajax.php", true);
@@ -277,7 +285,7 @@ echo "
 
         xhttp.onreadystatechange = function() {
             if (this.readyState === 4 && this.status === 200) {
-                console.log("Total Lines: " + this.responseText);
+                // console.log("Total Lines: " + this.responseText);
                 g.totalLines = this.responseText;
             }
         };
@@ -297,7 +305,7 @@ echo "
 
         xhttp.onreadystatechange = function() {
             if (this.readyState === 4 && this.status === 200) {
-                console.log(this.responseText);
+                // console.log(this.responseText);
             }
         };
         xhttp.open("POST", "../ajax/ajax.php", true);
