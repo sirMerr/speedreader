@@ -7,6 +7,12 @@
  * @author Tiffany Le-Nguyen
  */
 
+// Makes sure that if the anonymous user brute forces
+// to this path, he just gets redirected to login
+if (!isset($_SESSION['username'])) {
+    header('Location:/'.'../app/login.php');
+    exit();
+}
 echo "
 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css' integrity='sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb' crossorigin='anonymous'>
 ";
