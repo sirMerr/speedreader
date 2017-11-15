@@ -5,15 +5,13 @@ require_once(__DIR__ . '/../persistence/DAO.php');
 $loginErr = "";
 // Validate that access is only through a POST request,
 // redirect to index.php if not
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location:/'.'index.php');
-    exit();
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // These are required so no need for isset
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    login($username, $password);
 }
-
-$username = $_POST["username"];
-$password = $_POST["password"];
-
-login($username, $password);
 
 /**
  * Secure login function
