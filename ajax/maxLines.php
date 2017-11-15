@@ -1,9 +1,10 @@
-<?php session_start();
+<?php
+
 require_once(__DIR__ . '/../persistence/DAO.php');
 
 $dao = new DAO();
 
-$speed = $dao->findSpeed($_SESSION['username']);
+$totalLines = $dao->findMaxId();
 $dao->closeConnection();
 
-echo $speed;
+echo $totalLines;

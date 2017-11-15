@@ -4,8 +4,7 @@ require_once(__DIR__ . '/../persistence/DAO.php');
 
 $dao = new DAO();
 
-$line = $dao->findLineForAccount($_SESSION['username']);
-$dao->updateLineIdIncrement($_SESSION['username']);
+$lineId = $dao->findLineIdForAccount($_SESSION['username']);
 $dao->closeConnection();
 
-echo $line;
+echo $lineId;

@@ -106,7 +106,11 @@ echo "
         g.btnStop.addEventListener('click', stopLines);
         g.btnStop.disabled = true;
 
+        // If this stays at 0, it means the db is not populated
+        g.totalLines = 0;
+
         getSpeed();
+        getTotalLines()
     }
 
     /**
@@ -117,14 +121,13 @@ echo "
         g.btnStart.disabled = true;
 
         // Make sure first iterance of line is set
-        if (g.line === '') {
+        // @todo Add another condition for max size
+        while (getLineId() <= g.totalLines && (g.line === '\n' || g.line === '')) {
             getLine();
         }
 
-        // Split per word
-        g.lineArr = g.line.split(" ");
-
         g.perMS = 60000/parseInt(g.wpmSelector.value.replace(' wpm', ''));
+
         // Set interval based on wpm
         g.interval = setInterval(printLine, g.perMS);
 
@@ -139,57 +142,100 @@ echo "
     // @todo: Handle end of book
     // Print each line at x interval
     function printLine() {
-        // Gets a new line if the line is an empty line
-        if (g.line.length === 0 || g.lineArr.length === 0 || g.counter >= g.lineArr.length) {
-            getLine();
+        checkEndBook();
+        if (g.counter === 0) {g.lineArr = g.line.split(" "); }
 
-            // Reset counter
+        console.log("Line: " + g.line);
+        console.log("LineArr: " + g.lineArr);
+
+        // If empty line, wait 4x wpm
+        if (g.lineArr.length === 1 && g.lineArr[g.counter] === '\n') {
+            // Timeout for new line
+            setTimeout(()=> {
+                console.log('Waited because of new line');
+            }, g.perMS * 4);
+
             g.counter = 0;
+            getLine();
+            return;
+        }
 
-            // Do nothing this interval if the new line is also empty
-            if (g.line.length === 0) {
-                setTimeout(()=> {
-                    console.log('Waited because of new line');
-                }, g.perMS * 4);
-            } else {
-                g.lineArr = g.line.split(" ");
-
-                // @todo Handle end of book (if $dao->findLineId >= max lines)
-                if (!g.lineArr || g.lineArr.length === 0) {
-                    clearInterval(g.interval);
-                } else {
-                    // console.log(lineArr[counter]);
-                    g.word.innerHTML = position(g.lineArr[g.counter]);
-                    g.counter++;
-
-                    if (g.lineArr[g.counter].length === 0) {
-                        setTimeout(()=> {
-                            console.log('Waited because of new line');
-                        }, g.perMS * 4);
-                    } else if (g.lineArr[g.counter].match(/[.,;?!]$/)) {
-                        setTimeout(()=> {
-                            console.log('Waited because of a period');
-                        }, g.perMS * 2);
-                    }
-                }
-            }
-        } else {
-            // console.log(lineArr[counter]);
+        // Inside array
+        if (g.counter < g.lineArr.length) {
             g.word.innerHTML = position(g.lineArr[g.counter]);
-            g.counter++;
 
-            if (g.lineArr[g.counter].length === 0) {
-                setTimeout(()=> {
-                    console.log('Waited because of new line');
-                }, g.perMS * 4);
-            } else if (g.lineArr[g.counter].match(/[.,;?!]$/)) {
-                setTimeout(()=> {
-                    console.log('Waited because of a period');
+            // Punctuation stops
+            if (g.lineArr[g.counter].match(/[.,;?!]$/)) {
+                setTimeout(() => {
+                    console.log('Waited because of a period: ' + g.lineArr[g.counter]);
                 }, g.perMS * 2);
             }
+            g.counter++;
+        } else {
+            g.counter = 0;
+            getLine();
         }
+//        // Gets a new line if the line is an empty line
+//        if (g.line.length === 0 || g.lineArr.length === 0 || g.counter >= g.lineArr.length) {
+//            getLine();
+//
+//            // Reset counter
+//            g.counter = 0;
+//
+//            // Do nothing this interval if the new line is also empty
+//            if (g.line.length === 0) {
+//                setTimeout(()=> {
+//                    console.log('Waited because of new line');
+//                }, g.perMS * 4);
+//            } else {
+//                g.lineArr = g.line.split(" ");
+//
+//                if (!g.lineArr || g.lineArr.length === 0) {
+//                    clearInterval(g.interval);
+//                } else {
+//                    // console.log(lineArr[counter]);
+//                    g.word.innerHTML = position(g.lineArr[g.counter]);
+//                    g.counter++;
+//
+//                    if (g.lineArr.length === 0) {
+//                        setTimeout(()=> {
+//                            console.log('Waited because of new line: ' + g.lineArr[g.counter]);
+//                        }, g.perMS * 4);
+//                    } else if (g.lineArr[g.counter].match(/[.,;?!]$/)) {
+//                        setTimeout(()=> {
+//                            console.log('Waited because of punctuation: ' + g.lineArr[g.counter]);
+//                        }, g.perMS * 2);
+//                    }
+//                }
+//            }
+//        } else {
+//            // console.log(lineArr[counter]);
+//            g.word.innerHTML = position(g.lineArr[g.counter]);
+//            g.counter++;
+//
+//            if (!g.line || g.lineArr.length === 0) {
+//                setTimeout(()=> {
+//                    console.log('Waited because of new line');
+//                }, g.perMS * 4);
+//            } else if (g.lineArr[g.counter].match(/[.,;?!]$/)) {
+//                setTimeout(()=> {
+//                    console.log('Waited because of a period: ' + g.lineArr[g.counter]);
+//                }, g.perMS * 2);
+//            }
+//        }
     }
 
+    /**
+     * Stops and disables reader if the end of the book is reached
+     */
+    function checkEndBook() {
+        if (getLineId() >= g.totalLines) {
+            console.log("End of book");
+            clearInterval(g.interval);
+            g.btnStart.disabled = true;
+            g.btnStop.disabled = true;
+        }
+    }
     /**
      * Stop button handler
      */
@@ -222,6 +268,20 @@ echo "
     }
 
     /**
+     * Update Line Id
+     */
+    function getLineId() {
+        const xhttp = new XMLHttpRequest();
+
+        xhttp.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200) {
+                console.log("New line id: " + this.responseText)
+            }
+        };
+        xhttp.open("POST", "../ajax/lineNumber.php", true);
+        xhttp.send();
+    }
+    /**
      * Get the wpm
      */
     function getSpeed() {
@@ -233,6 +293,21 @@ echo "
             }
         };
         xhttp.open("GET", "../ajax/speed.php", true);
+        xhttp.send();
+    }
+
+    /**
+     * Get the total number of lines
+     */
+    function getTotalLines() {
+        const xhttp = new XMLHttpRequest();
+
+        xhttp.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200) {
+                g.totalLines = this.responseText;
+            }
+        };
+        xhttp.open("GET", "../ajax/maxLines.php", true);
         xhttp.send();
     }
 

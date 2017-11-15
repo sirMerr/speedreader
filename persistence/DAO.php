@@ -97,8 +97,8 @@ class DAO{
      * Checks if an account with a given username and password exists
      *
      * @param $username
-     * @param $password
      * @return bool true if found, false if not
+     * @internal param $password
      */
     function findAccount($username) {
         $query = "SELECT count(*)
@@ -115,6 +115,26 @@ class DAO{
 
         return boolval($userExists[0]);
 
+    }
+
+    /**
+     * Find the number of lines in the db
+     *
+     * @return string max id
+     */
+    function findMaxId() {
+        $query = "SELECT MAX(id)
+                    FROM lines
+                 ";
+
+        $stmt = $this -> pdo -> prepare($query);
+        $stmt -> bindParam(1, $username);
+
+        $stmt -> execute();
+
+        $maxId = $stmt -> fetch();
+
+        return $maxId[0];
     }
 
     /**
