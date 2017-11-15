@@ -2,7 +2,8 @@
 
 require_once(__DIR__ . '/../persistence/DAO.php');
 
-$dao = new DAO();
-
-$dao->updateSpeed($_SESSION['username'], $_SESSION['password']);
-$dao->closeConnection();
+if (isset($_POST['speed'])) {
+    $dao = new DAO();
+    $dao->updateSpeed($_SESSION['username'], $_POST['speed']);
+    $dao->closeConnection();
+}
