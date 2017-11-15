@@ -90,7 +90,7 @@ echo "
         </div>
     </div>
     <a role='button' class='btn btn-link' href='logout.php'>Logout</a>
-    <a role='button' class='btn btn-link' href='http://www.textfiles.com/etext/FICTION/2000010.txt'>Full Text</a>
+    <a role='button' class='btn btn-link' href='http://www.textfiles.com/etext/FICTION/2000010.txt'>Project Gutenberg Source</a>
 </div>
 ";
 ?>
@@ -228,12 +228,14 @@ echo "
 
     /**
      * Get the next line
+     *
+     * @see ajax.md for docs on all ajax calls
      */
     function getLine() {
         const xhttp = new XMLHttpRequest();
         const parameters = `method=getLine`;
 
-        xhttp.onreadystatechange = function() {
+        xhttp.onreadystatechange = () => {
             if (this.readyState === 4 && this.status === 200) {
                 g.line = this.responseText;
             }
@@ -245,12 +247,14 @@ echo "
 
     /**
      * Update Line Id
+     *
+     * @see ajax.md for docs on all ajax calls
      */
     function getLineId() {
         const xhttp = new XMLHttpRequest();
         const parameters = `method=getLineId`;
 
-        xhttp.onreadystatechange = function() {
+        xhttp.onreadystatechange = () => {
             if (this.readyState === 4 && this.status === 200) {
                 // console.log("New line id: " + this.responseText)
             }
@@ -261,12 +265,14 @@ echo "
     }
     /**
      * Get the wpm
+     *
+     * @see ajax.md for docs on all ajax calls
      */
     function getSpeed() {
         const xhttp = new XMLHttpRequest();
         const parameters = `method=getSpeed`;
 
-        xhttp.onreadystatechange = function() {
+        xhttp.onreadystatechange = () => {
             if (this.readyState === 4 && this.status === 200) {
                 g.wpmSelector.value = this.responseText + " wpm";
             }
@@ -278,12 +284,14 @@ echo "
 
     /**
      * Get the total number of lines
+     *
+     * @see ajax.md for docs on all ajax calls
      */
     function getTotalLines() {
         const xhttp = new XMLHttpRequest();
         const parameters = `method=getTotalLines`;
 
-        xhttp.onreadystatechange = function() {
+        xhttp.onreadystatechange = () => {
             if (this.readyState === 4 && this.status === 200) {
                 // console.log("Total Lines: " + this.responseText);
                 g.totalLines = this.responseText;
@@ -296,6 +304,8 @@ echo "
 
     /**
      *  Set the wpm
+     *
+     * @see ajax.md for docs on all ajax calls
      */
     function setSpeed() {
         clearInterval(g.interval);
@@ -303,7 +313,7 @@ echo "
         const xhttp = new XMLHttpRequest();
         const parameters = `speed=${parseInt(g.wpmSelector.value.replace(' wpm', ''))}`;
 
-        xhttp.onreadystatechange = function() {
+        xhttp.onreadystatechange = () => {
             if (this.readyState === 4 && this.status === 200) {
                 // console.log(this.responseText);
             }

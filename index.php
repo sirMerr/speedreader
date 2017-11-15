@@ -1,5 +1,8 @@
 <?php session_start();
-
+/**
+ *
+ * @author Tiffany Le-Nguyen
+ */
 require_once(__DIR__ . '/persistence/DAO.php');
 
 echo "
