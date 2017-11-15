@@ -13,9 +13,10 @@ if (isset($_POST['method'])) {
     $dao = new DAO();
     switch ($_POST['method']) {
         case "getTotalLines":
-            $lineId = $dao->findMaxId();
+            $totalLines = $dao->findMaxId();
             $dao->closeConnection();
-            return $lineId;
+            echo $totalLines;
+            break;
         default:
             break;
     }
