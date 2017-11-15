@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2965379-9707-4adc-a297-99f635214a99" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapper.php" afterPath="$PROJECT_DIR$/scrapper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajax.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,18 +33,18 @@
             <state relative-caret-position="4500">
               <caret line="323" column="26" lean-forward="false" selection-start-line="323" selection-start-column="26" selection-end-line="323" selection-end-column="26" />
               <folding>
-                <marker date="1510784438000" expanded="true" signature="26:162" ph=" Main application, has the spritz reader which ..." />
-                <marker date="1510784438000" expanded="true" signature="8699:8858" ph="{...}" />
-                <marker date="1510784438000" expanded="true" signature="8699:10538" ph="..." />
-                <marker date="1510784438000" expanded="true" signature="8864:9290" ph="/** Positions the word for display ...*/" />
-                <marker date="1510784438000" expanded="true" signature="9319:10528" ph="{...}" />
-                <marker date="1510784438000" expanded="true" signature="9429:9534" ph="{...}" />
-                <marker date="1510784438000" expanded="true" signature="9464:9487" ph="..." />
-                <marker date="1510784438000" expanded="true" signature="9570:9811" ph="{...}" />
-                <marker date="1510784438000" expanded="true" signature="9714:9802" ph="{...}" />
-                <marker date="1510784438000" expanded="true" signature="9847:10041" ph="{...}" />
-                <marker date="1510784438000" expanded="true" signature="10079:10272" ph="{...}" />
-                <marker date="1510784438000" expanded="true" signature="10295:10487" ph="{...}" />
+                <marker date="1510785173000" expanded="true" signature="26:162" ph=" Main application, has the spritz reader which ..." />
+                <marker date="1510785173000" expanded="true" signature="8699:8858" ph="{...}" />
+                <marker date="1510785173000" expanded="true" signature="8699:10538" ph="..." />
+                <marker date="1510785173000" expanded="true" signature="8864:9290" ph="/** Positions the word for display ...*/" />
+                <marker date="1510785173000" expanded="true" signature="9319:10528" ph="{...}" />
+                <marker date="1510785173000" expanded="true" signature="9429:9534" ph="{...}" />
+                <marker date="1510785173000" expanded="true" signature="9464:9487" ph="..." />
+                <marker date="1510785173000" expanded="true" signature="9570:9811" ph="{...}" />
+                <marker date="1510785173000" expanded="true" signature="9714:9802" ph="{...}" />
+                <marker date="1510785173000" expanded="true" signature="9847:10041" ph="{...}" />
+                <marker date="1510785173000" expanded="true" signature="10079:10272" ph="{...}" />
+                <marker date="1510785173000" expanded="true" signature="10295:10487" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -150,18 +150,34 @@
             <state relative-caret-position="30">
               <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
               <folding>
-                <marker date="1510784438000" expanded="true" signature="688:714" ph="..." />
+                <marker date="1510785173000" expanded="true" signature="688:714" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scrapper.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="scrapper.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scrapper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+            <state relative-caret-position="615">
+              <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajax.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ajax.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="83">
+                <caret line="172" column="1" lean-forward="true" selection-start-line="172" selection-start-column="1" selection-end-line="172" selection-end-column="1" />
+                <folding>
+                  <marker date="1510785183000" expanded="true" signature="3467:3588" ph="{...}" />
+                  <marker date="1510785183000" expanded="true" signature="3527:3582" ph="{...}" />
+                </folding>
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -224,6 +240,7 @@
         <option value="$PROJECT_DIR$/ajax/ajax.php" />
         <option value="$PROJECT_DIR$/app/reader.php" />
         <option value="$PROJECT_DIR$/scrapper.php" />
+        <option value="$PROJECT_DIR$/ajax.md" />
       </list>
     </option>
   </component>
@@ -292,21 +309,6 @@
             <path>
               <item name="speedreader" type="b2602c69:ProjectViewProjectNode" />
               <item name="speedreader" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="speedreader" type="b2602c69:ProjectViewProjectNode" />
-              <item name="speedreader" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ajax" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="speedreader" type="b2602c69:ProjectViewProjectNode" />
-              <item name="speedreader" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="speedreader" type="b2602c69:ProjectViewProjectNode" />
-              <item name="speedreader" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="persistence" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -380,7 +382,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83657000" />
+    <option name="totallyTimeSpent" value="83667000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="356" y="23" width="1069" height="809" extended-state="0" />
@@ -430,7 +432,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ajax/speed.php" />
     <entry file="file://$PROJECT_DIR$/ajax/updateSpeed.php" />
     <entry file="file://$PROJECT_DIR$/scrapper.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -528,18 +529,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1510784438000" expanded="true" signature="26:162" ph=" Main application, has the spritz reader which ..." />
-            <marker date="1510784438000" expanded="true" signature="8699:8858" ph="{...}" />
-            <marker date="1510784438000" expanded="true" signature="8699:10538" ph="..." />
-            <marker date="1510784438000" expanded="true" signature="8864:9290" ph="/** Positions the word for display ...*/" />
-            <marker date="1510784438000" expanded="true" signature="9319:10528" ph="{...}" />
-            <marker date="1510784438000" expanded="true" signature="9429:9534" ph="{...}" />
-            <marker date="1510784438000" expanded="true" signature="9464:9487" ph="..." />
-            <marker date="1510784438000" expanded="true" signature="9570:9811" ph="{...}" />
-            <marker date="1510784438000" expanded="true" signature="9714:9802" ph="{...}" />
-            <marker date="1510784438000" expanded="true" signature="9847:10041" ph="{...}" />
-            <marker date="1510784438000" expanded="true" signature="10079:10272" ph="{...}" />
-            <marker date="1510784438000" expanded="true" signature="10295:10487" ph="{...}" />
+            <marker date="1510785173000" expanded="true" signature="26:162" ph=" Main application, has the spritz reader which ..." />
+            <marker date="1510785173000" expanded="true" signature="8699:8858" ph="{...}" />
+            <marker date="1510785173000" expanded="true" signature="8699:10538" ph="..." />
+            <marker date="1510785173000" expanded="true" signature="8864:9290" ph="/** Positions the word for display ...*/" />
+            <marker date="1510785173000" expanded="true" signature="9319:10528" ph="{...}" />
+            <marker date="1510785173000" expanded="true" signature="9429:9534" ph="{...}" />
+            <marker date="1510785173000" expanded="true" signature="9464:9487" ph="..." />
+            <marker date="1510785173000" expanded="true" signature="9570:9811" ph="{...}" />
+            <marker date="1510785173000" expanded="true" signature="9714:9802" ph="{...}" />
+            <marker date="1510785173000" expanded="true" signature="9847:10041" ph="{...}" />
+            <marker date="1510785173000" expanded="true" signature="10079:10272" ph="{...}" />
+            <marker date="1510785173000" expanded="true" signature="10295:10487" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -603,7 +604,7 @@
         <state relative-caret-position="120">
           <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <marker date="1510784438000" expanded="true" signature="688:714" ph="..." />
+            <marker date="1510785173000" expanded="true" signature="688:714" ph="..." />
           </folding>
         </state>
       </provider>
@@ -692,14 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scrapper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -782,7 +775,7 @@
         <state relative-caret-position="30">
           <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
           <folding>
-            <marker date="1510784438000" expanded="true" signature="688:714" ph="..." />
+            <marker date="1510785173000" expanded="true" signature="688:714" ph="..." />
           </folding>
         </state>
       </provider>
@@ -792,19 +785,41 @@
         <state relative-caret-position="4500">
           <caret line="323" column="26" lean-forward="false" selection-start-line="323" selection-start-column="26" selection-end-line="323" selection-end-column="26" />
           <folding>
-            <marker date="1510784438000" expanded="true" signature="26:162" ph=" Main application, has the spritz reader which ..." />
-            <marker date="1510784438000" expanded="true" signature="8699:8858" ph="{...}" />
-            <marker date="1510784438000" expanded="true" signature="8699:10538" ph="..." />
-            <marker date="1510784438000" expanded="true" signature="8864:9290" ph="/** Positions the word for display ...*/" />
-            <marker date="1510784438000" expanded="true" signature="9319:10528" ph="{...}" />
-            <marker date="1510784438000" expanded="true" signature="9429:9534" ph="{...}" />
-            <marker date="1510784438000" expanded="true" signature="9464:9487" ph="..." />
-            <marker date="1510784438000" expanded="true" signature="9570:9811" ph="{...}" />
-            <marker date="1510784438000" expanded="true" signature="9714:9802" ph="{...}" />
-            <marker date="1510784438000" expanded="true" signature="9847:10041" ph="{...}" />
-            <marker date="1510784438000" expanded="true" signature="10079:10272" ph="{...}" />
-            <marker date="1510784438000" expanded="true" signature="10295:10487" ph="{...}" />
+            <marker date="1510785173000" expanded="true" signature="26:162" ph=" Main application, has the spritz reader which ..." />
+            <marker date="1510785173000" expanded="true" signature="8699:8858" ph="{...}" />
+            <marker date="1510785173000" expanded="true" signature="8699:10538" ph="..." />
+            <marker date="1510785173000" expanded="true" signature="8864:9290" ph="/** Positions the word for display ...*/" />
+            <marker date="1510785173000" expanded="true" signature="9319:10528" ph="{...}" />
+            <marker date="1510785173000" expanded="true" signature="9429:9534" ph="{...}" />
+            <marker date="1510785173000" expanded="true" signature="9464:9487" ph="..." />
+            <marker date="1510785173000" expanded="true" signature="9570:9811" ph="{...}" />
+            <marker date="1510785173000" expanded="true" signature="9714:9802" ph="{...}" />
+            <marker date="1510785173000" expanded="true" signature="9847:10041" ph="{...}" />
+            <marker date="1510785173000" expanded="true" signature="10079:10272" ph="{...}" />
+            <marker date="1510785173000" expanded="true" signature="10295:10487" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="83">
+            <caret line="172" column="1" lean-forward="true" selection-start-line="172" selection-start-column="1" selection-end-line="172" selection-end-column="1" />
+            <folding>
+              <marker date="1510785183000" expanded="true" signature="3467:3588" ph="{...}" />
+              <marker date="1510785183000" expanded="true" signature="3527:3582" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
