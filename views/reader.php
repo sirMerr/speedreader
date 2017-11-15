@@ -124,7 +124,7 @@ echo "
         // Split per word
         g.lineArr = g.line.split(" ");
 
-        g.perMS = 60000/parseInt(g.wpmSelector.value.replace(' wpm', '');
+        g.perMS = 60000/parseInt(g.wpmSelector.value.replace(' wpm', ''));
         // Set interval based on wpm
         g.interval = setInterval(printLine, g.perMS);
 
@@ -148,7 +148,9 @@ echo "
 
             // Do nothing this interval if the new line is also empty
             if (g.line.length === 0) {
-                setTimeout(()=> {console.log('Waited because of new line');}, g.perMS * 4);
+                setTimeout(()=> {
+                    console.log('Waited because of new line');
+                }, g.perMS * 4);
             } else {
                 g.lineArr = g.line.split(" ");
 
@@ -161,7 +163,9 @@ echo "
                     g.counter++;
 
                     if (g.lineArr[g.counter].match(/[.,;?!]$/)) {
-                        setTimeout(()=> {console.log('Waited because of a period');}, g.perMS * 2);
+                        setTimeout(()=> {
+                            console.log('Waited because of a period');
+                        }, g.perMS * 2);
                     }
                 }
             }
@@ -171,10 +175,13 @@ echo "
             g.counter++;
 
             if (g.lineArr[g.counter].match(/[.,;?!]$/)) {
-                setTimeout(()=> {console.log('Waited because of a period');}, g.perMS * 2);
+                setTimeout(()=> {
+                    console.log('Waited because of a period');
+                }, g.perMS * 2);
             }
         }
     }
+
     /**
      * Stop button handler
      */
