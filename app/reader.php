@@ -261,14 +261,16 @@ echo "
      */
     function getTotalLines() {
         const xhttp = new XMLHttpRequest();
+        const parameters = `method=getTotalLines`;
 
         xhttp.onreadystatechange = function() {
             if (this.readyState === 4 && this.status === 200) {
                 g.totalLines = this.responseText;
             }
         };
-        xhttp.open("POST", "../ajax/totalLines.php", true);
-        xhttp.send();
+        xhttp.open("POST", "../ajax/ajax.php", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send(parameters);
     }
 
     /**
