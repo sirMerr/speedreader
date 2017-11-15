@@ -22,14 +22,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 function login($username, $password) {
     $dao = new DAO();
 
-    echo "
-    <div class='container'>
-    <h1>In login: $username , $password</h1>
-    </div>
-    ";
     // Use DAO to get login attempts
     if ($dao->findLoginAttempts($username) >= 3) {
-        $loginErr = "You've had too login attempts. This account is now locked";
+        echo "
+            <div class='alert alert-danger' role='alert'>
+                You've had too many login attempts. This account
+                has been locked until further notice.
+            </div>
+        ";
     } else {
         $hash = $dao->findHash($username);
         // Authenticate user, update time
@@ -37,7 +37,11 @@ function login($username, $password) {
             // Increment attempts
             $dao->updateLoginAttemptsIncrement($username);
             // Redirect to error page, or back to login with error message
-            $loginErr = "Wrong password. Please try again.";
+            echo "
+            <div class='alert alert-danger' role='alert'>
+                Wrong password, please try again!
+            </div>
+        ";
         } else {
             $dao->updateResetLoginAttempts($username);
 
@@ -58,9 +62,6 @@ function login($username, $password) {
 <div class='jumbotron' style='display: flex; height: 100vh; align-items: center'>
     <div class='container'>
         <h1>Sign In</h1>
-        <div class='alert alert-danger' role='alert'>
-          <?php echo $loginErr ?>
-        </div>
         <form action="<?php echo htmlentities($_SERVER["PHP_SELF"]);?>" method='POST' id='loginForm'>
           <div class='form-group'>
             <label for='username'>Username</label>
