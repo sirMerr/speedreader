@@ -175,54 +175,6 @@ echo "
             g.counter = 0;
             getLine();
         }
-//        // Gets a new line if the line is an empty line
-//        if (g.line.length === 0 || g.lineArr.length === 0 || g.counter >= g.lineArr.length) {
-//            getLine();
-//
-//            // Reset counter
-//            g.counter = 0;
-//
-//            // Do nothing this interval if the new line is also empty
-//            if (g.line.length === 0) {
-//                setTimeout(()=> {
-//                    console.log('Waited because of new line');
-//                }, g.perMS * 4);
-//            } else {
-//                g.lineArr = g.line.split(" ");
-//
-//                if (!g.lineArr || g.lineArr.length === 0) {
-//                    clearInterval(g.interval);
-//                } else {
-//                    // console.log(lineArr[counter]);
-//                    g.word.innerHTML = position(g.lineArr[g.counter]);
-//                    g.counter++;
-//
-//                    if (g.lineArr.length === 0) {
-//                        setTimeout(()=> {
-//                            console.log('Waited because of new line: ' + g.lineArr[g.counter]);
-//                        }, g.perMS * 4);
-//                    } else if (g.lineArr[g.counter].match(/[.,;?!]$/)) {
-//                        setTimeout(()=> {
-//                            console.log('Waited because of punctuation: ' + g.lineArr[g.counter]);
-//                        }, g.perMS * 2);
-//                    }
-//                }
-//            }
-//        } else {
-//            // console.log(lineArr[counter]);
-//            g.word.innerHTML = position(g.lineArr[g.counter]);
-//            g.counter++;
-//
-//            if (!g.line || g.lineArr.length === 0) {
-//                setTimeout(()=> {
-//                    console.log('Waited because of new line');
-//                }, g.perMS * 4);
-//            } else if (g.lineArr[g.counter].match(/[.,;?!]$/)) {
-//                setTimeout(()=> {
-//                    console.log('Waited because of a period: ' + g.lineArr[g.counter]);
-//                }, g.perMS * 2);
-//            }
-//        }
     }
 
     /**
