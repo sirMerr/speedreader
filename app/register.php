@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 Success! Redirecting you to the reader...
             </div>";
 
-        header('Location:/'.'views/reader.php');
+        header('Location:/'.'reader.php');
         exit();
     }
 }

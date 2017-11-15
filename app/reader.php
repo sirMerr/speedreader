@@ -77,7 +77,7 @@ echo "
             </div>
         </div>
     </div>
-    <a role='button' class='btn btn-link' href='../webapp/logout.php'>Logout</a>
+    <a role='button' class='btn btn-link' href='logout.php'>Logout</a>
     <a role='button' class='btn btn-link' href='http://www.textfiles.com/etext/FICTION/2000010.txt'>Full Text</a>
 </div>
 ";
@@ -139,10 +139,14 @@ echo "
 
     }
 
-    // @todo: Handle end of book
-    // Print each line at x interval
+    /**
+     * Print each line at x interval
+     */
     function printLine() {
+        // Ends everything if at the end of the book
         checkEndBook();
+
+        // If counter is 0, this means the array has yet to be set.
         if (g.counter === 0) {g.lineArr = g.line.split(" "); }
 
         console.log("Line: " + g.line);
@@ -162,16 +166,20 @@ echo "
 
         // Inside array
         if (g.counter < g.lineArr.length) {
+            // Display the word
             g.word.innerHTML = position(g.lineArr[g.counter]);
 
-            // Punctuation stops
+            // Pauses the flow if it's a punctuation
             if (g.lineArr[g.counter].match(/[.,;?!]$/)) {
                 setTimeout(() => {
                     console.log('Waited because of a period: ' + g.lineArr[g.counter]);
                 }, g.perMS * 2);
             }
+
+            // Increment counter so the next word will be shown in the next interval
             g.counter++;
         } else {
+            // Reset counter and get the next line
             g.counter = 0;
             getLine();
         }

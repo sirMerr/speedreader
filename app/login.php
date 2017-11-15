@@ -58,7 +58,7 @@ function login($username, $password) {
                 $_SESSION['lineId'] = $dao->findLineIdForAccount($_SESSION['username']);
                 session_regenerate_id();
 
-                header('Location:/' . 'views/reader.php');
+                header('Location:/' . 'reader.php');
                 exit();
             }
         }
