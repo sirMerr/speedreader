@@ -23,6 +23,12 @@ if (isset($_POST['method'])) {
             $dao->closeConnection();
             echo $line;
             break;
+        case "getLineId":
+            $lineId = $dao->findLineForAccount($_SESSION['username']);
+            $dao->findLineIdForAccount($_SESSION['username']);
+            $dao->closeConnection();
+            echo $lineId;
+            break;
         case "getSpeed":
             $speed = $dao->findSpeed($_SESSION['username']);
             $dao->closeConnection();
