@@ -100,21 +100,20 @@ class DAO{
      * @param $password
      * @return bool true if found, false if not
      */
-    function findAccount($username, $password) {
+    function findAccount($username) {
         $query = "SELECT count(*)
                     FROM accounts
-                    WHERE username = ? AND password = ?
+                    WHERE username = ?
                  ";
 
         $stmt = $this -> pdo -> prepare($query);
         $stmt -> bindParam(1, $username);
-        $stmt -> bindParam(2, $password);
 
         $stmt -> execute();
 
         $userExists = $stmt -> fetch();
 
-        return boolval($userExists);
+        return boolval($userExists[0]);
 
     }
 

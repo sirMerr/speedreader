@@ -30,27 +30,37 @@ function login($username, $password) {
             </div>
         ";
     } else {
-        $hash = $dao->findHash($username);
-        // Authenticate user, update time
-        if (!password_verify($password, $hash)) {
-            // Increment attempts
-            $dao->updateLoginAttemptsIncrement($username);
-            // Redirect to error page, or back to login with error message
+        // Error if username is not found
+        if (!$dao->findAccount($username)) {
             echo "
             <div class='alert alert-danger' role='alert' style='margin-bottom: 0'>
-                Wrong password, please try again!
-            </div>
-        ";
+                Wrong credentials. Please try again!
+            </div>";
         } else {
-            $dao->updateResetLoginAttempts($username);
+            $hash = $dao->findHash($username);
 
-            // Save in session
-            $_SESSION['username'] = $username;
-            $_SESSION['lineId'] = $dao->findLineIdForAccount($_SESSION['username']);
-            session_regenerate_id();
+            // Check if password is incorrect
+            if (!password_verify($password, $hash)) {
+                // Increment attempts
+                $dao->updateLoginAttemptsIncrement($username);
 
-            header('Location:/'.'views/reader.php');
-            exit();
+                // Display error
+                echo "
+                <div class='alert alert-danger' role='alert' style='margin-bottom: 0'>
+                    Wrong credentials. Please try again!
+                </div>";
+            } else {
+                // In here, password is correct, so sign in succeeded
+                $dao->updateResetLoginAttempts($username);
+
+                // Save in session
+                $_SESSION['username'] = $username;
+                $_SESSION['lineId'] = $dao->findLineIdForAccount($_SESSION['username']);
+                session_regenerate_id();
+
+                header('Location:/' . 'views/reader.php');
+                exit();
+            }
         }
     }
 }
