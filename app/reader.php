@@ -217,14 +217,17 @@ echo "
      */
     function getLine() {
         const xhttp = new XMLHttpRequest();
+        const parameters = `method=getLine`;
 
         xhttp.onreadystatechange = function() {
             if (this.readyState === 4 && this.status === 200) {
                 g.line = this.responseText;
             }
         };
-        xhttp.open("GET", "../ajax/line.php", true);
+        xhttp.open("GET", "../ajax/ajax.php", true);
         xhttp.send();
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send(parameters);
     }
 
     /**
@@ -232,28 +235,32 @@ echo "
      */
     function getLineId() {
         const xhttp = new XMLHttpRequest();
+        const parameters = `method=getLineId`;
 
         xhttp.onreadystatechange = function() {
             if (this.readyState === 4 && this.status === 200) {
                 console.log("New line id: " + this.responseText)
             }
         };
-        xhttp.open("POST", "../ajax/lineNumber.php", true);
-        xhttp.send();
+        xhttp.open("POST", "../ajax/ajax.php", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send(parameters);
     }
     /**
      * Get the wpm
      */
     function getSpeed() {
         const xhttp = new XMLHttpRequest();
+        const parameters = `method=getSpeed`;
 
         xhttp.onreadystatechange = function() {
             if (this.readyState === 4 && this.status === 200) {
                 g.wpmSelector.value = this.responseText + " wpm";
             }
         };
-        xhttp.open("GET", "../ajax/speed.php", true);
-        xhttp.send();
+        xhttp.open("GET", "../ajax/ajax.php", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send(parameters);
     }
 
     /**
@@ -288,7 +295,7 @@ echo "
                 console.log(this.responseText);
             }
         };
-        xhttp.open("POST", "../ajax/updateSpeed.php", true);
+        xhttp.open("POST", "../ajax/ajax.php", true);
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhttp.send(parameters);
 

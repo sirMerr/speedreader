@@ -17,6 +17,17 @@ if (isset($_POST['method'])) {
             $dao->closeConnection();
             echo $totalLines;
             break;
+        case "getLine":
+            $line = $dao->findLineForAccount($_SESSION['username']);
+            $dao->updateLineIdIncrement($_SESSION['username']);
+            $dao->closeConnection();
+            echo $line;
+            break;
+        case "getSpeed":
+            $speed = $dao->findSpeed($_SESSION['username']);
+            $dao->closeConnection();
+            echo $speed;
+            break;
         default:
             break;
     }
