@@ -224,7 +224,7 @@ echo "
                 g.line = this.responseText;
             }
         };
-        xhttp.open("GET", "../ajax/ajax.php", true);
+        xhttp.open("POST", "../ajax/ajax.php", true);
         xhttp.send();
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhttp.send(parameters);
@@ -258,7 +258,7 @@ echo "
                 g.wpmSelector.value = this.responseText + " wpm";
             }
         };
-        xhttp.open("GET", "../ajax/ajax.php", true);
+        xhttp.open("POST", "../ajax/ajax.php", true);
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhttp.send(parameters);
     }

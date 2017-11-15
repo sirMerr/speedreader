@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2965379-9707-4adc-a297-99f635214a99" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ajax/line.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ajax/lineNumber.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ajax/speed.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ajax/totalLines.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ajax/updateSpeed.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/reader.php" afterPath="$PROJECT_DIR$/app/reader.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,28 +30,28 @@
       <file leaf-file-name="reader.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/reader.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="199" column="26" lean-forward="true" selection-start-line="199" selection-start-column="26" selection-end-line="199" selection-end-column="26" />
+            <state relative-caret-position="223">
+              <caret line="290" column="33" lean-forward="false" selection-start-line="290" selection-start-column="33" selection-end-line="290" selection-end-column="33" />
               <folding>
-                <marker date="1510776768000" expanded="true" signature="433:993" ph="..." />
-                <marker date="1510776768000" expanded="true" signature="446:535" ph="{...}" />
-                <marker date="1510776768000" expanded="true" signature="561:705" ph="{...}" />
-                <marker date="1510776768000" expanded="true" signature="721:872" ph="{...}" />
-                <marker date="1510776768000" expanded="true" signature="899:985" ph="{...}" />
-                <marker date="1510776768000" expanded="true" signature="1044:1513" ph="..." />
-                <marker date="1510776768000" expanded="true" signature="1068:1513" ph="..." />
-                <marker date="1510776768000" expanded="true" signature="1091:1513" ph="..." />
-                <marker date="1510776768000" expanded="true" signature="1121:1131" ph="..." />
-                <marker date="1510776768000" expanded="true" signature="1121:1513" ph="..." />
-                <marker date="1510776768000" expanded="true" signature="1168:1220" ph="..." />
-                <marker date="1510776768000" expanded="true" signature="1252:1513" ph="..." />
-                <marker date="1510776768000" expanded="true" signature="1288:1311" ph="..." />
-                <marker date="1510776768000" expanded="true" signature="1312:1513" ph="..." />
-                <marker date="1510776768000" expanded="true" signature="1350:1513" ph="..." />
-                <marker date="1510776768000" expanded="true" signature="1422:1513" ph="..." />
-                <marker date="1510776768000" expanded="true" signature="1679:1791" ph="..." />
-                <marker date="1510776768000" expanded="true" signature="1833:1942" ph="..." />
-                <marker date="1510776768000" expanded="true" signature="9284:9307" ph="..." />
+                <marker date="1510776876000" expanded="true" signature="433:993" ph="..." />
+                <marker date="1510776876000" expanded="true" signature="446:535" ph="{...}" />
+                <marker date="1510776876000" expanded="true" signature="561:705" ph="{...}" />
+                <marker date="1510776876000" expanded="true" signature="721:872" ph="{...}" />
+                <marker date="1510776876000" expanded="true" signature="899:985" ph="{...}" />
+                <marker date="1510776876000" expanded="true" signature="1044:1513" ph="..." />
+                <marker date="1510776876000" expanded="true" signature="1068:1513" ph="..." />
+                <marker date="1510776876000" expanded="true" signature="1091:1513" ph="..." />
+                <marker date="1510776876000" expanded="true" signature="1121:1131" ph="..." />
+                <marker date="1510776876000" expanded="true" signature="1121:1513" ph="..." />
+                <marker date="1510776876000" expanded="true" signature="1168:1220" ph="..." />
+                <marker date="1510776876000" expanded="true" signature="1252:1513" ph="..." />
+                <marker date="1510776876000" expanded="true" signature="1288:1311" ph="..." />
+                <marker date="1510776876000" expanded="true" signature="1312:1513" ph="..." />
+                <marker date="1510776876000" expanded="true" signature="1350:1513" ph="..." />
+                <marker date="1510776876000" expanded="true" signature="1422:1513" ph="..." />
+                <marker date="1510776876000" expanded="true" signature="1679:1791" ph="..." />
+                <marker date="1510776876000" expanded="true" signature="1833:1942" ph="..." />
+                <marker date="1510776876000" expanded="true" signature="9286:9309" ph="..." />
               </folding>
             </state>
           </provider>
@@ -331,7 +327,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82820000" />
+    <option name="totallyTimeSpent" value="82909000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="356" y="23" width="1069" height="809" extended-state="0" />
@@ -475,25 +471,25 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1510776768000" expanded="true" signature="433:993" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="446:535" ph="{...}" />
-            <marker date="1510776768000" expanded="true" signature="561:705" ph="{...}" />
-            <marker date="1510776768000" expanded="true" signature="721:872" ph="{...}" />
-            <marker date="1510776768000" expanded="true" signature="899:985" ph="{...}" />
-            <marker date="1510776768000" expanded="true" signature="1044:1513" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="1068:1513" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="1091:1513" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="1121:1131" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="1121:1513" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="1168:1220" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="1252:1513" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="1288:1311" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="1312:1513" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="1350:1513" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="1422:1513" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="1679:1791" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="1833:1942" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="9284:9307" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="433:993" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="446:535" ph="{...}" />
+            <marker date="1510776876000" expanded="true" signature="561:705" ph="{...}" />
+            <marker date="1510776876000" expanded="true" signature="721:872" ph="{...}" />
+            <marker date="1510776876000" expanded="true" signature="899:985" ph="{...}" />
+            <marker date="1510776876000" expanded="true" signature="1044:1513" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="1068:1513" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="1091:1513" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="1121:1131" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="1121:1513" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="1168:1220" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="1252:1513" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="1288:1311" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="1312:1513" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="1350:1513" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="1422:1513" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="1679:1791" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="1833:1942" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="9286:9309" ph="..." />
           </folding>
         </state>
       </provider>
@@ -753,28 +749,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/reader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="199" column="26" lean-forward="true" selection-start-line="199" selection-start-column="26" selection-end-line="199" selection-end-column="26" />
+        <state relative-caret-position="223">
+          <caret line="290" column="33" lean-forward="false" selection-start-line="290" selection-start-column="33" selection-end-line="290" selection-end-column="33" />
           <folding>
-            <marker date="1510776768000" expanded="true" signature="433:993" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="446:535" ph="{...}" />
-            <marker date="1510776768000" expanded="true" signature="561:705" ph="{...}" />
-            <marker date="1510776768000" expanded="true" signature="721:872" ph="{...}" />
-            <marker date="1510776768000" expanded="true" signature="899:985" ph="{...}" />
-            <marker date="1510776768000" expanded="true" signature="1044:1513" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="1068:1513" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="1091:1513" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="1121:1131" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="1121:1513" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="1168:1220" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="1252:1513" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="1288:1311" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="1312:1513" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="1350:1513" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="1422:1513" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="1679:1791" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="1833:1942" ph="..." />
-            <marker date="1510776768000" expanded="true" signature="9284:9307" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="433:993" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="446:535" ph="{...}" />
+            <marker date="1510776876000" expanded="true" signature="561:705" ph="{...}" />
+            <marker date="1510776876000" expanded="true" signature="721:872" ph="{...}" />
+            <marker date="1510776876000" expanded="true" signature="899:985" ph="{...}" />
+            <marker date="1510776876000" expanded="true" signature="1044:1513" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="1068:1513" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="1091:1513" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="1121:1131" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="1121:1513" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="1168:1220" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="1252:1513" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="1288:1311" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="1312:1513" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="1350:1513" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="1422:1513" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="1679:1791" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="1833:1942" ph="..." />
+            <marker date="1510776876000" expanded="true" signature="9286:9309" ph="..." />
           </folding>
         </state>
       </provider>
