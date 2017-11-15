@@ -1,4 +1,10 @@
 <?php session_start();
+/**
+ * Registration page with self-submitting form.
+ * If the registration succeeds, it redirects to the reader.
+ *
+ * @author Tiffany Le-Nguyen
+ */
 require_once(__DIR__ . '/../persistence/DAO.php');
 
 // Validate that access is only through a POST request,
