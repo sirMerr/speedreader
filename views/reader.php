@@ -307,7 +307,7 @@ echo "
                 g.totalLines = this.responseText;
             }
         };
-        xhttp.open("GET", "../ajax/maxLines.php", true);
+        xhttp.open("POST", "../ajax/totalLines.php", true);
         xhttp.send();
     }
 
