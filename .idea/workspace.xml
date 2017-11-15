@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2965379-9707-4adc-a297-99f635214a99" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/ajax.php" afterPath="$PROJECT_DIR$/ajax/ajax.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/reader.php" afterPath="$PROJECT_DIR$/app/reader.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ajax/line.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ajax/lineNumber.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ajax/speed.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ajax/totalLines.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ajax/updateSpeed.php" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,8 +34,8 @@
       <file leaf-file-name="reader.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/reader.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="226" column="39" lean-forward="false" selection-start-line="226" selection-start-column="39" selection-end-line="226" selection-end-column="39" />
+            <state relative-caret-position="162">
+              <caret line="199" column="26" lean-forward="true" selection-start-line="199" selection-start-column="26" selection-end-line="199" selection-end-column="26" />
               <folding>
                 <marker date="1510776768000" expanded="true" signature="433:993" ph="..." />
                 <marker date="1510776768000" expanded="true" signature="446:535" ph="{...}" />
@@ -63,16 +66,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="142">
               <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="totalLines.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ajax/totalLines.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -121,46 +114,6 @@
                 <marker date="1510775506000" expanded="true" signature="1123:1139" ph="..." />
                 <marker date="1510775506000" expanded="true" signature="1140:1217" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="speed.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ajax/speed.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="8" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="updateSpeed.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ajax/updateSpeed.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="1" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="8" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="line.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ajax/line.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="10" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lineNumber.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ajax/lineNumber.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -378,7 +331,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82796000" />
+    <option name="totallyTimeSpent" value="82820000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="356" y="23" width="1069" height="809" extended-state="0" />
@@ -800,8 +753,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/reader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="226" column="39" lean-forward="false" selection-start-line="226" selection-start-column="39" selection-end-line="226" selection-end-column="39" />
+        <state relative-caret-position="162">
+          <caret line="199" column="26" lean-forward="true" selection-start-line="199" selection-start-column="26" selection-end-line="199" selection-end-column="26" />
           <folding>
             <marker date="1510776768000" expanded="true" signature="433:993" ph="..." />
             <marker date="1510776768000" expanded="true" signature="446:535" ph="{...}" />
