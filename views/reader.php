@@ -124,44 +124,57 @@ echo "
         // Split per word
         g.lineArr = g.line.split(" ");
 
+        g.perMS = 60000/parseInt(g.wpmSelector.value.replace(' wpm', '');
         // Set interval based on wpm
-        g.interval = setInterval(printLine, 60000/parseInt(g.wpmSelector.value.replace(' wpm', '')));
+        g.interval = setInterval(printLine, g.perMS);
 
         // Enable stop button
         g.btnStop.disabled = false;
 
-        // @todo: Handle end of book
-        // Print each line at x interval
-        function printLine() {
+        // Start printing lines
+        printLine();
 
-            // Gets a new line if the line is an empty line
-            if (g.line.length === 0 || g.lineArr.length === 0 || g.counter >= g.lineArr.length) {
-                getLine();
+    }
 
-                // Reset counter
-                g.counter = 0;
+    // @todo: Handle end of book
+    // Print each line at x interval
+    function printLine() {
+        // Gets a new line if the line is an empty line
+        if (g.line.length === 0 || g.lineArr.length === 0 || g.counter >= g.lineArr.length) {
+            getLine();
 
-                // Do nothing this interval if the new line is also empty
-                if (g.line.length !== 0) {
-                    g.lineArr = g.line.split(" ");
+            // Reset counter
+            g.counter = 0;
 
-                    // @todo Handle end of book (if $dao->findLineId >= max lines)
-                    if (!g.lineArr || g.lineArr.length === 0) {
-                        clearInterval(g.interval);
-                    } else {
-                        // console.log(lineArr[counter]);
-                        g.word.innerHTML = position(g.lineArr[g.counter]);
-                        g.counter++;
+            // Do nothing this interval if the new line is also empty
+            if (g.line.length === 0) {
+                setTimeout(()=> {console.log('Waited because of new line');}, g.perMS * 4);
+            } else {
+                g.lineArr = g.line.split(" ");
+
+                // @todo Handle end of book (if $dao->findLineId >= max lines)
+                if (!g.lineArr || g.lineArr.length === 0) {
+                    clearInterval(g.interval);
+                } else {
+                    // console.log(lineArr[counter]);
+                    g.word.innerHTML = position(g.lineArr[g.counter]);
+                    g.counter++;
+
+                    if (g.lineArr[g.counter].match(/[.,;?!]$/)) {
+                        setTimeout(()=> {console.log('Waited because of a period');}, g.perMS * 2);
                     }
                 }
-            } else {
-                // console.log(lineArr[counter]);
-                g.word.innerHTML = position(g.lineArr[g.counter]);
-                g.counter++;
+            }
+        } else {
+            // console.log(lineArr[counter]);
+            g.word.innerHTML = position(g.lineArr[g.counter]);
+            g.counter++;
+
+            if (g.lineArr[g.counter].match(/[.,;?!]$/)) {
+                setTimeout(()=> {console.log('Waited because of a period');}, g.perMS * 2);
             }
         }
     }
-
     /**
      * Stop button handler
      */
