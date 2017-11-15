@@ -225,7 +225,6 @@ echo "
             }
         };
         xhttp.open("POST", "../ajax/ajax.php", true);
-        xhttp.send();
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhttp.send(parameters);
     }
