@@ -1,4 +1,11 @@
 <?php session_start();
+/**
+ * Main application, has the spritz reader which
+ * will read out each word of a chosen book at a
+ * certain speed for its user.
+ *
+ * @author Tiffany Le-Nguyen
+ */
 
 echo "
 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css' integrity='sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb' crossorigin='anonymous'>
@@ -79,6 +86,11 @@ echo "
     const g = {};
     window.onload=init;
 
+    /**
+     * This function runs on window load,
+     * declares and sets the global vars and sets the
+     * wpm.
+     */
     function init () {
         g.wordCanvas = document.querySelector("wordCanvas");
         g.wpmSelector = document.querySelector(".wpmSelector");
@@ -92,26 +104,48 @@ echo "
         g.wpmSelector.addEventListener('change', setSpeed);
         g.btnStart.addEventListener('click', startLines);
         g.btnStop.addEventListener('click', stopLines);
+        g.btnStop.disabled = true;
 
         getSpeed();
     }
 
+    /**
+     * Start spritzing lines
+     */
     function startLines() {
+        // Disable button so user does not have multiple intervals
+        g.btnStart.disabled = true;
+
+        // Make sure first iterance of line is set
         if (g.line === '') {
             getLine();
         }
+
+        // Split per word
         g.lineArr = g.line.split(" ");
 
+        // Set interval based on wpm
         g.interval = setInterval(printLine, 60000/parseInt(g.wpmSelector.value.replace(' wpm', '')));
 
+        // Enable stop button
+        g.btnStop.disabled = false;
+
         // @todo: Handle end of book
+        // Print each line at x interval
         function printLine() {
+
+            // Gets a new line if the line is an empty line
             if (g.line.length === 0 || g.lineArr.length === 0 || g.counter >= g.lineArr.length) {
                 getLine();
+
+                // Reset counter
                 g.counter = 0;
+
+                // Do nothing this interval if the new line is also empty
                 if (g.line.length !== 0) {
                     g.lineArr = g.line.split(" ");
 
+                    // @todo Handle end of book (if $dao->findLineId >= max lines)
                     if (!g.lineArr || g.lineArr.length === 0) {
                         clearInterval(g.interval);
                     } else {
@@ -128,12 +162,25 @@ echo "
         }
     }
 
+    /**
+     * Stop button handler
+     */
     function stopLines() {
+        // Disable stop button
+        g.btnStop.disabled = true;
+
+        // Clear interval
         if (g.interval) {
             clearInterval(g.interval);
         }
+
+        // Enable start button
+        g.btnStart.disabled = false;
     }
 
+    /**
+     * Get the next line
+     */
     function getLine() {
         const xhttp = new XMLHttpRequest();
 
@@ -146,6 +193,9 @@ echo "
         xhttp.send();
     }
 
+    /**
+     * Get the wpm
+     */
     function getSpeed() {
         const xhttp = new XMLHttpRequest();
 
@@ -158,6 +208,9 @@ echo "
         xhttp.send();
     }
 
+    /**
+     *  Set the wpm
+     */
     function setSpeed() {
         clearInterval(g.interval);
 
@@ -191,8 +244,8 @@ echo "
        const length = word.length;
        let result = "<span class='wordStart'>";
        if (length === 1) {
-           result += `</span><span class='pivot'>    `;
-           result += `${word}</span>`;
+           result += `    </span>`;
+           result += `<span class='pivot'>${word}</span>`;
        } else if (length >=2 && length <=5) {
            result += `   ${word.slice(0,1)}</span>`;
            result += `<span class='pivot'>${word.charAt(1)}`;

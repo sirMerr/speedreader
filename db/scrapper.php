@@ -1,4 +1,10 @@
 <?php
+/**
+ * This script should be run in console only to repopulate
+ * the database. It assumes the tables have been created.
+ *
+ * @author Tiffany Le-Nguyen
+ */
 require_once(__DIR__ . '/../persistence/DAO.php');
 
 loadDB();
