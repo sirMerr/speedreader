@@ -84,7 +84,7 @@ echo "
         </div>
     </div>
     <a role='button' class='btn btn-link' href='logout.php'>Logout</a>
-    <a role='button' class='btn btn-link' href='http://www.textfiles.com/etext/FICTION/2000010.txt'>Full Text</a>
+    <a role='button' class='btn btn-link' href='http://www.textfiles.com/etext/FICTION/2000010.txt'>Gutenberg Project Source Text</a>
 </div>
 ";
 ?>
@@ -127,7 +127,6 @@ echo "
         g.btnStart.disabled = true;
 
         // Make sure first iterance of line is set
-        // @todo Add another condition for max size
         while (getLineId() <= g.totalLines && (g.line === '\n' || g.line === '')) {
             getLine();
         }
@@ -154,9 +153,6 @@ echo "
 
         // If counter is 0, this means the array has yet to be set.
         if (g.counter === 0) {g.lineArr = g.line.split(" "); }
-
-        console.log("Line: " + g.line);
-        console.log("LineArr: " + g.lineArr);
 
         // If empty line, wait 4x wpm
         if (g.lineArr.length === 1 && g.lineArr[g.counter] === '\n') {
@@ -223,7 +219,7 @@ echo "
      */
     function getLine() {
         const xhttp = new XMLHttpRequest();
-        const parameters = `method=getLine`;
+        const parameters = 'method=getLine';
 
         xhttp.onreadystatechange = function() {
             if (this.readyState === 4 && this.status === 200) {
