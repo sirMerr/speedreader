@@ -4,6 +4,11 @@
  * will read out each word of a chosen book at a
  * certain speed for its user.
  *
+ * Note that the specific word the user is reading
+ * is not saved as the specs did not require this.
+ * As so, when the user logs back in, it will continue
+ * from the beginning of the line the user stopped at.
+ *
  * @author Tiffany Le-Nguyen
  */
 

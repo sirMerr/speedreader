@@ -1,5 +1,10 @@
 <?php session_start();
-
+/**
+ * Start of app. Checks if there is a session and
+ * redirects accordingly
+ *
+ * @author Tiffany Le-Nguyen
+ */
 require_once(__DIR__ . '/persistence/DAO.php');
 
 echo "
